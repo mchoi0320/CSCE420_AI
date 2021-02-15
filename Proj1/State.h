@@ -11,7 +11,6 @@ class State {
 
     public:
         State() : num_stacks(0), key("") {}
-        // State(vector<vector<char> > s, int n) : curr(s), num_stacks(n) { hash(); }
         State(vector<vector<char> > s, int n) : curr(s), num_stacks(n) { key = hash(); }
 
         string get_key() { return key; }

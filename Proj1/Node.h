@@ -16,5 +16,5 @@ class Node {
         bool goal_test(State*); // checks whether this state matches another (like the goal)
         vector<Node*> successors(); // gets the successors of the state, and wraps them in Nodes
         string hash(); // return hash key of state
-        int print_path(Node*, int); // print sequence of states from root down to this
+        int print_path(); // print sequence of states from root down to this
 };

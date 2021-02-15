@@ -1,0 +1,162 @@
+==================== Test Case 1 ====================
+
+:: cat testcase1.bwp
+2 3 3
+>>>>>>>>>>
+ABC
+
+>>>>>>>>>>
+
+CBA
+>>>>>>>>>>
+
+:: ./BlocksworldBFS testcase1.bwp
+----------
+Success!
+Iterations: 4 | Depth: 2 | Maximum Frontier Size: 2
+>>>>>>>>>>
+[MOVE 0]
+ABC
+
+>>>>>>>>>>
+[MOVE 1]
+AB
+C
+>>>>>>>>>>
+[MOVE 2]
+A
+CB
+>>>>>>>>>>
+[MOVE 3]
+
+CBA
+>>>>>>>>>>
+
+
+==================== Test Case 2 ====================
+
+:: cat testcase2.bwp
+4 6 5
+>>>>>>>>>>
+BCF
+
+A
+DE
+>>>>>>>>>>
+B
+DFC
+AE
+
+>>>>>>>>>>
+
+:: ./BlocksworldBFS testcase2.bwp
+Current---Iteration: 1000 | Depth: 4 | Maximum Frontier Size: 380
+Current---Iteration: 2000 | Depth: 4 | Maximum Frontier Size: 638
+----------
+Success!
+Iterations: 2362 | Depth: 4 | Maximum Frontier Size: 729
+>>>>>>>>>>
+[MOVE 0]
+BCF
+
+A
+DE
+>>>>>>>>>>
+[MOVE 1]
+BCF
+
+AE
+D
+>>>>>>>>>>
+[MOVE 2]
+BCF
+D
+AE
+
+>>>>>>>>>>
+[MOVE 3]
+BC
+DF
+AE
+
+>>>>>>>>>>
+[MOVE 4]
+B
+DFC
+AE
+
+>>>>>>>>>>
+
+
+==================== Test Case 3 ====================
+
+:: cat testcase3.bwp
+5 10 8
+>>>>>>>>>>
+EGH
+AFI
+BJ
+C
+D
+>>>>>>>>>>
+EG
+
+BJ
+
+DIFCAH
+>>>>>>>>>>
+
+:: ./BlocksworldBFS testcase3.bwp
+Current---Iteration: 1000 | Depth: 3 | Maximum Frontier Size: 499
+Current---Iteration: 2000 | Depth: 3 | Maximum Frontier Size: 979
+Current---Iteration: 3000 | Depth: 3 | Maximum Frontier Size: 1401
+ .
+ .
+ .
+Current---Iteration: 167000 | Depth: 5 | Maximum Frontier Size: 52400
+----------
+Success!
+Iterations: 167448 | Depth: 5 | Maximum Frontier Size: 52542
+>>>>>>>>>>
+[MOVE 0]
+EGH
+AFI
+BJ
+C
+D
+>>>>>>>>>>
+[MOVE 1]
+EGH
+AF
+BJ
+C
+DI
+>>>>>>>>>>
+[MOVE 2]
+EGH
+A
+BJ
+C
+DIF
+>>>>>>>>>>
+[MOVE 3]
+EGH
+A
+BJ
+
+DIFC
+>>>>>>>>>>
+[MOVE 4]
+EGH
+
+BJ
+
+DIFCA
+>>>>>>>>>>
+[MOVE 5]
+EG
+
+BJ
+
+DIFCAH
+>>>>>>>>>>

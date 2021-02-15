@@ -25,11 +25,13 @@ string Node::hash() {
     return curr.get_key();
 }
 
-int Node::print_path(Node* n, int d) {
-    if (n->parent != NULL) d = print_path(n->parent, d);
+int Node::print_path() {
+    int i=0;
+    if (parent != NULL) i = parent->print_path();
 
-    cout << "[MOVE " << d << "]\n";
-    n->get_curr().print();
+    cout << "[MOVE " << i << "]\n";
+    get_curr().print();
     cout << ">>>>>>>>>>\n";
-    return d+1;
+
+    return i+1;
 }

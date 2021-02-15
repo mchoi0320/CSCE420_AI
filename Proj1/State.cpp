@@ -37,7 +37,6 @@ vector<State*> State::successors() {
                     temp[j].push_back(temp[i][temp[i].size()-1]);
                     temp[i].erase(temp[i].end()-1);
 
-                    // State move(temp, num_stacks);
                     State* move = new State(temp, num_stacks);
                     moves.push_back(move);
                 }

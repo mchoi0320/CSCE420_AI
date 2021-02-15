@@ -4,42 +4,68 @@
 #include <queue>
 #include <unordered_map>
 #include <utility>
+#include <tuple>
 
 // #include "State.h"
 #include "Node.h"
 
 using namespace std;
 
-Node* BFS(Node* init, State goal) {
-    
-    if (init->goal_test(&goal)) return init;
+#define MAX_ITERS 1e6
 
-    queue<Node*> frontier;
-    frontier.push(init);
+tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
+
+    unsigned int max_frontier_size=0;
+    int num_iters=0, depth=0;
+
+    if (init->goal_test(&goal)) return tuple<Node*, unsigned int, int, int>(init, max_frontier_size, num_iters, depth);
+
+    queue<pair<Node*, int> > frontier;
+    frontier.push(pair<Node*, int>(init, depth));
+    max_frontier_size = frontier.size();
 
     unordered_map<string, bool> explored;
+    
+    while (!frontier.empty() && num_iters < MAX_ITERS) {
 
-    while (!frontier.empty()) {
-        Node* node = frontier.front();
+        pair<Node*, int> node = frontier.front();
         frontier.pop();
         
-        vector<Node*> nodes = node->successors();
+        vector<Node*> nodes = node.first->successors();
         vector<Node*>::iterator iter;
         for (iter=nodes.begin(); iter!=nodes.end(); iter++) {
-            State s = (*iter)->get_curr();
-            Node* n = new Node(s, node);
+            num_iters++;
 
-            if (s.match(&goal)) return n;
+            if (num_iters % 1000 == 0) {
+                cout << "Current---Iteration: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
+            }
+
+            State s = (*iter)->get_curr();
+            Node* n = new Node(s, node.first);
+
+            if (s.match(&goal)) {
+                // nodes.clear();
+                // queue<pair<Node*, int> > empty;
+                // swap(frontier, empty);
+                cout << "----------\n";
+                return tuple<Node*, unsigned int, int, int>(n, max_frontier_size, num_iters, depth);
+            }
 
             if (explored.find(s.get_key()) == explored.end()) {
                 explored.insert(make_pair<string, bool>(s.get_key(), true));
-                frontier.push(n);
+                frontier.push(pair<Node*, int>(n, node.second+1));
+
+                if (frontier.size() > max_frontier_size) max_frontier_size = frontier.size();
             }
         }
+
+        depth = node.second+1;
     }
 
+    cout << "----------\n";
+
     Node* fail = new Node();
-    return fail;
+    return tuple<Node*, unsigned int, int, int>(fail, max_frontier_size, num_iters, depth);
 }
 
 vector<vector<char> > get_state(ifstream& f, int n) {
@@ -61,6 +87,11 @@ vector<vector<char> > get_state(ifstream& f, int n) {
 }
 
 int main(int argc, char** argv) {
+
+    if (argc < 2) {
+        cout << "Please provide a file name in the command line." << endl;
+        exit(1);
+    }
     
     ifstream f;
     f.open(argv[1]);
@@ -76,53 +107,24 @@ int main(int argc, char** argv) {
     
     vector<vector<char> > stacks_init = get_state(f, num_stacks);
     vector<vector<char> > stacks_goal = get_state(f, num_stacks);
-    // vector<vector<char> > stacks_init, stacks_goal;
-
-    // for (int k=0; k<2; k++) {
-    //     getline(f, line); // separator line
-
-    //     for (int i=0; i<num_stacks; i++) {
-    //         vector<char> stack;
-
-    //         getline(f, line);
-    //         for (int j=0; j<line.length(); j++) stack.push_back(line[j]);
-
-    //         if (k == 0) stacks_init.push_back(stack);
-    //         else stacks_goal.push_back(stack);
-    //     }
-    // }
 
     f.close();
 
     State init(stacks_init, num_stacks);
     State goal(stacks_goal, num_stacks);
-    // init.print();
-    // goal.print();
-    // cout << init.match(&goal) << endl;
-    // vector<State*> moves = init.successors();
-    // vector<State*>::iterator iter;
-    // for (iter=moves.begin(); iter!=moves.end(); iter++) {
-    //     (*iter)->print();
-    //     cout << endl;
-    // }
-    // for (int i=0; i<moves.size(); i++) {
-    //     moves[i].print();
-    //     cout << endl;
-    // }
-    // Node n(&init, moves[0]);
-    // cout << n.goal_test(&goal) << endl;
-    Node start(init);
-    // vector<Node*> moves = start.successors();
-    // vector<Node*>::iterator iter;
-    // for (iter=moves.begin(); iter!=moves.end(); iter++) {
-    //     (*iter)->get_curr().print();
-    //     cout << endl;
-    // }
-    // moves[0]->print_path(moves[0], 0);
-    // vector<vector<char> > t;
-    // cout << t.size() << endl;
-    Node* end = BFS(&start, goal);
-    end->print_path(end, 0);
 
-    cout << "\n---Program ends here---\n";
+    Node problem(init);
+    tuple<Node*,unsigned int, int, int> solution = BFS(&problem, goal);
+
+    if (get<0>(solution)->get_curr().get_key() != "") {
+        cout << "Success!\n";
+        cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
+        cout << ">>>>>>>>>>\n";
+        get<0>(solution)->print_path();
+    }
+    
+    else {
+        cout << "Failure!\n";
+        cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
+    }
 }
