@@ -11,10 +11,12 @@
 
 using namespace std;
 
-#define MAX_ITERS 1e6
+#define MAX_ITERS 1e6 // sets the BFS iteration limit to 1,000,000
 
+// smplementation of Breadth-First Search
 tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
 
+    // summary statistics
     unsigned int max_frontier_size=0;
     int num_iters=0, depth=0;
 
@@ -24,7 +26,7 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
     frontier.push(pair<Node*, int>(init, depth));
     max_frontier_size = frontier.size();
 
-    unordered_map<string, bool> explored;
+    unordered_map<string, bool> explored; // for keeping track of visited nodes
     
     while (!frontier.empty() && num_iters < MAX_ITERS) {
 
@@ -36,6 +38,7 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
         for (iter=nodes.begin(); iter!=nodes.end(); iter++) {
             num_iters++;
 
+            // print out summary statistics every 1000 iterations
             if (num_iters % 1000 == 0) {
                 cout << "Current---Iteration: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
             }
@@ -44,9 +47,9 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
             Node* n = new Node(s, node.first);
 
             if (s.match(&goal)) {
-                // nodes.clear();
-                // queue<pair<Node*, int> > empty;
-                // swap(frontier, empty);
+                // nodes.clear();                           // an attempt to
+                // queue<pair<Node*, int> > empty;          // fix memory leaks...
+                // swap(frontier, empty);                   // didn't work
                 cout << "----------\n";
                 return tuple<Node*, unsigned int, int, int>(n, max_frontier_size, num_iters, depth);
             }
@@ -64,10 +67,11 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
 
     cout << "----------\n";
 
-    Node* fail = new Node();
+    Node* fail = new Node(); // failure returns an "empty" node
     return tuple<Node*, unsigned int, int, int>(fail, max_frontier_size, num_iters, depth);
 }
 
+// parsing the input file
 vector<vector<char> > get_state(ifstream& f, int n) {
     
     vector<vector<char> > stacks;
@@ -88,6 +92,7 @@ vector<vector<char> > get_state(ifstream& f, int n) {
 
 int main(int argc, char** argv) {
 
+    // check that file name is given
     if (argc < 2) {
         cout << "Please provide a file name in the command line." << endl;
         exit(1);
@@ -116,6 +121,7 @@ int main(int argc, char** argv) {
     Node problem(init);
     tuple<Node*,unsigned int, int, int> solution = BFS(&problem, goal);
 
+    // print summary statistics and path (if successful)
     if (get<0>(solution)->get_curr().get_key() != "") {
         cout << "Success!\n";
         cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
