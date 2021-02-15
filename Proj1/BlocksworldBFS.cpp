@@ -26,7 +26,7 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
     frontier.push(pair<Node*, int>(init, depth));
     max_frontier_size = frontier.size();
 
-    unordered_map<string, bool> explored; // for keeping track of visited nodes
+    unordered_map<string, Node*> explored; // for keeping track of visited nodes
     
     while (!frontier.empty() && num_iters < MAX_ITERS) {
 
@@ -55,7 +55,7 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
             }
 
             if (explored.find(s.get_key()) == explored.end()) {
-                explored.insert(make_pair<string, bool>(s.get_key(), true));
+                explored.insert(pair<string, Node*>(s.get_key(), n));
                 frontier.push(pair<Node*, int>(n, node.second+1));
 
                 if (frontier.size() > max_frontier_size) max_frontier_size = frontier.size();
@@ -130,7 +130,7 @@ int main(int argc, char** argv) {
     }
     
     else {
-        cout << "Failure!\n";
+        cout << "Failure! Path to goal could not be found.\n";
         cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
     }
 }
