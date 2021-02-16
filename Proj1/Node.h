@@ -1,4 +1,5 @@
-#include "State.h"
+#ifndef NODE_H
+#define NODE_H
 
 class Node {
     private:
@@ -18,3 +19,5 @@ class Node {
         string hash(); // return hash key of state
         int print_path(); // print sequence of states from root down to this
 };
+
+#endif

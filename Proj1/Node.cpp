@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "State.h"
 #include "Node.h"
 
 using namespace std;
@@ -12,8 +13,7 @@ vector<Node*> Node::successors() {
     vector<State*> moves = curr.successors();
     vector<Node*> moves_nodes;
     
-    vector<State*>::iterator iter;
-    for (iter=moves.begin(); iter!=moves.end(); iter++) {
+    for (vector<State*>::iterator iter=moves.begin(); iter!=moves.end(); ++iter) {
         Node* successor = new Node(**iter, this);
         moves_nodes.push_back(successor);
     }

@@ -1,3 +1,6 @@
+#ifndef STATE_H
+#define STATE_H
+
 #include <string>
 #include <vector>
 
@@ -19,3 +22,5 @@ class State {
         string hash(); // generate a “key” unique to each state for tracking Visited
         vector<State*> successors(); // generate all children of this state given all legal moves
 };
+
+#endif

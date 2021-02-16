@@ -11,3 +11,6 @@ State: State.cpp State.h
 
 Node: Node.cpp Node.h
 	g++ -c Node.cpp
+
+clean:
+	rm *.o BlocksworldBFS

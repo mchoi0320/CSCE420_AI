@@ -13,7 +13,7 @@ CBA
 :: ./BlocksworldBFS testcase1.bwp
 ----------
 Success!
-Iterations: 4 | Depth: 2 | Maximum Frontier Size: 2
+Iterations: 4 | Depth: 3 | Maximum Frontier Size: 2
 >>>>>>>>>>
 [MOVE 0]
 ABC

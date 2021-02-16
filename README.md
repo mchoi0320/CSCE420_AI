@@ -1,1 +1,1 @@
-# CSCE_420
+# CSCE 420: Artificial Intelligence

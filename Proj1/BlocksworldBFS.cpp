@@ -4,23 +4,26 @@
 #include <queue>
 #include <unordered_map>
 #include <utility>
-#include <tuple>
 
-// #include "State.h"
+#include "State.h"
 #include "Node.h"
 
 using namespace std;
 
-#define MAX_ITERS 1e6 // sets the BFS iteration limit to 1,000,000
+#define MAX_ITERS 5e6 // sets the BFS iteration limit to 5,000,000
 
-// smplementation of Breadth-First Search
-tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
+// implementation of Breadth-First Search
+Node* BFS(Node* init, State goal) {
 
     // summary statistics
     unsigned int max_frontier_size=0;
     int num_iters=0, depth=0;
 
-    if (init->goal_test(&goal)) return tuple<Node*, unsigned int, int, int>(init, max_frontier_size, num_iters, depth);
+    if (init->goal_test(&goal)) {
+        cout << "----------\nSuccess!\n";
+        cout << "The problem state matches the goal state.\n";
+        return init;
+    }
 
     queue<pair<Node*, int> > frontier;
     frontier.push(pair<Node*, int>(init, depth));
@@ -34,9 +37,9 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
         frontier.pop();
         
         vector<Node*> nodes = node.first->successors();
-        vector<Node*>::iterator iter;
-        for (iter=nodes.begin(); iter!=nodes.end(); iter++) {
-            num_iters++;
+        depth = node.second+1;
+        for (vector<Node*>::iterator iter=nodes.begin(); iter!=nodes.end(); ++iter) {
+            ++num_iters;
 
             // print out summary statistics every 1000 iterations
             if (num_iters % 1000 == 0) {
@@ -47,28 +50,39 @@ tuple<Node*, unsigned int, int, int> BFS(Node* init, State goal) {
             Node* n = new Node(s, node.first);
 
             if (s.match(&goal)) {
-                // nodes.clear();                           // an attempt to
-                // queue<pair<Node*, int> > empty;          // fix memory leaks...
-                // swap(frontier, empty);                   // didn't work
-                cout << "----------\n";
-                return tuple<Node*, unsigned int, int, int>(n, max_frontier_size, num_iters, depth);
+                // queue<pair<Node*, int> > empty;          // an attempt to fix memory leaks
+                // swap(frontier, empty);                   // based on some Google searches...
+                // nodes.clear();                           // didn't work (understandable)
+
+                // for (Node* p : nodes) delete p;          // another attempt... the for loop results in an
+                // nodes.clear();                           // error: double free or corruption
+
+                // while (!frontier.empty()) {              // more attempts, but
+                //     delete frontier.front().first;       // this is another double free or corruption error and
+                //     frontier.pop();                      // this didn't change anything...
+                // }                                        // I'm completely lost x_x
+
+                cout << "----------\nSuccess!\n";
+                cout << "Iterations: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
+
+                return n;
             }
 
             if (explored.find(s.get_key()) == explored.end()) {
                 explored.insert(pair<string, Node*>(s.get_key(), n));
-                frontier.push(pair<Node*, int>(n, node.second+1));
+                frontier.push(pair<Node*, int>(n, depth));
 
                 if (frontier.size() > max_frontier_size) max_frontier_size = frontier.size();
             }
         }
-
-        depth = node.second+1;
     }
 
-    cout << "----------\n";
+    cout << "----------\nFailure!\n";
+    cout << "Path to goal could not be found.\n";
+    cout << "Iterations: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
 
     Node* fail = new Node(); // failure returns an "empty" node
-    return tuple<Node*, unsigned int, int, int>(fail, max_frontier_size, num_iters, depth);
+    return fail;
 }
 
 // parsing the input file
@@ -78,11 +92,11 @@ vector<vector<char> > get_state(ifstream& f, int n) {
 
     string line;
     getline(f, line); // separator line
-    for (int i=0; i<n; i++) {
+    for (int i=0; i<n; ++i) {
         vector<char> stack;
 
         getline(f, line);
-        for (int j=0; j<line.length(); j++) stack.push_back(line[j]);
+        for (int j=0; j<line.length(); ++j) stack.push_back(line[j]);
 
         stacks.push_back(stack);
     }
@@ -119,18 +133,13 @@ int main(int argc, char** argv) {
     State goal(stacks_goal, num_stacks);
 
     Node problem(init);
-    tuple<Node*,unsigned int, int, int> solution = BFS(&problem, goal);
+    Node* solution = BFS(&problem, goal);
 
-    // print summary statistics and path (if successful)
-    if (get<0>(solution)->get_curr().get_key() != "") {
-        cout << "Success!\n";
-        cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
+    // print path only if: (1) the solution does not match the problem and (2) the solution is not an "empty" node a.k.a. a failure
+    if (solution != &problem && solution->get_curr().get_key() != "") {
         cout << ">>>>>>>>>>\n";
-        get<0>(solution)->print_path();
+        solution->print_path();    
     }
-    
-    else {
-        cout << "Failure! Path to goal could not be found.\n";
-        cout << "Iterations: " << get<2>(solution) << " | " << "Depth: " << get<3>(solution) << " | " << "Maximum Frontier Size: " << get<1>(solution) << endl;
-    }
+
+    // delete solution;         // also double free or corruption which makes sense... so how do I fix the leaks?!
 }
