@@ -29,6 +29,7 @@ Node* BFS(Node* init, State goal) {
     max_frontier_size = frontier.size();
 
     unordered_map<string, Node*> explored; // for keeping track of visited nodes
+    explored[init->get_curr().get_key()] = init;
     
     while (!frontier.empty() && num_iters < MAX_ITERS) {
 
@@ -65,7 +66,7 @@ Node* BFS(Node* init, State goal) {
             }
 
             if (explored.find((*iter)->get_curr().get_key()) == explored.end()) {
-                explored.insert(pair<string, Node*>((*iter)->get_curr().get_key(), *iter));
+                explored[(*iter)->get_curr().get_key()] = *iter;
                 frontier.push(*iter);
 
                 if (frontier.size() > max_frontier_size) max_frontier_size = frontier.size();
