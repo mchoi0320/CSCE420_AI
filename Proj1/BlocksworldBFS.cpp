@@ -3,7 +3,6 @@
 #include <sstream>
 #include <queue>
 #include <unordered_map>
-#include <utility>
 
 #include "State.h"
 #include "Node.h"
@@ -17,7 +16,7 @@ Node* BFS(Node* init, State goal) {
 
     // summary statistics
     unsigned int max_frontier_size=0;
-    int num_iters=0, depth=0;
+    int depth, num_iters=0;
 
     if (init->goal_test(&goal)) {
         cout << "----------\nSuccess!\n";
@@ -25,20 +24,20 @@ Node* BFS(Node* init, State goal) {
         return init;
     }
 
-    queue<pair<Node*, int> > frontier;
-    frontier.push(pair<Node*, int>(init, depth));
+    queue<Node*> frontier;
+    frontier.push(init);
     max_frontier_size = frontier.size();
 
     unordered_map<string, Node*> explored; // for keeping track of visited nodes
     
     while (!frontier.empty() && num_iters < MAX_ITERS) {
 
-        pair<Node*, int> node = frontier.front();
+        Node* node = frontier.front();
         frontier.pop();
         
-        vector<Node*> nodes = node.first->successors();
-        depth = node.second+1;
+        vector<Node*> nodes = node->successors();
         for (vector<Node*>::iterator iter=nodes.begin(); iter!=nodes.end(); ++iter) {
+            depth = (*iter)->get_depth();
             ++num_iters;
 
             // print out summary statistics every 1000 iterations
@@ -46,10 +45,7 @@ Node* BFS(Node* init, State goal) {
                 cout << "Current---Iteration: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
             }
 
-            State s = (*iter)->get_curr();
-            Node* n = new Node(s, node.first);
-
-            if (s.match(&goal)) {
+            if ((*iter)->goal_test(&goal)) {
                 // queue<pair<Node*, int> > empty;          // an attempt to fix memory leaks
                 // swap(frontier, empty);                   // based on some Google searches...
                 // nodes.clear();                           // didn't work (understandable)
@@ -65,12 +61,12 @@ Node* BFS(Node* init, State goal) {
                 cout << "----------\nSuccess!\n";
                 cout << "Iterations: " << num_iters << " | " << "Depth: " << depth << " | " << "Maximum Frontier Size: " << max_frontier_size << endl;
 
-                return n;
+                return *iter;
             }
 
-            if (explored.find(s.get_key()) == explored.end()) {
-                explored.insert(pair<string, Node*>(s.get_key(), n));
-                frontier.push(pair<Node*, int>(n, depth));
+            if (explored.find((*iter)->get_curr().get_key()) == explored.end()) {
+                explored.insert(pair<string, Node*>((*iter)->get_curr().get_key(), *iter));
+                frontier.push(*iter);
 
                 if (frontier.size() > max_frontier_size) max_frontier_size = frontier.size();
             }

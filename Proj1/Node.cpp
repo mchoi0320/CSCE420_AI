@@ -14,7 +14,7 @@ vector<Node*> Node::successors() {
     vector<Node*> moves_nodes;
     
     for (vector<State*>::iterator iter=moves.begin(); iter!=moves.end(); ++iter) {
-        Node* successor = new Node(**iter, this);
+        Node* successor = new Node(**iter, this, depth+1);
         moves_nodes.push_back(successor);
     }
 
