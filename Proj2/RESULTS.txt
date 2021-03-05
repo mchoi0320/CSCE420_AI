@@ -1,0 +1,65 @@
+My Heuristic: h(n) = number of blocks in the wrong stack + number of blocks under the wrong block + 2(number of blocks atop the wrong block)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Example: bwchp01.bwp
+
+
+>>>>>>>>>>
+[MOVE 1]
+E
+D
+ABC
+>>>>>>>>>>
+[GOAL]
+
+CEDA
+B
+>>>>>>>>>>
+
+* A, C, E are in the wrong stacks: +3
+* 5 blocks are under the wrong block: +5
+* 5 blocks are atop the wrong block: +2(5) = +10
+
+h(n) = 3 + 5 + 10 = 18
+
+
+>>>>>>>>>>
+[MOVE 11]
+A
+CED
+B
+>>>>>>>>>>
+[GOAL]
+
+CEDA
+B
+>>>>>>>>>>
+
+* A is in the wrong stack: +1
+* 1 block is under the wrong block: +1
+* 1 blocks is atop the wrong block: +2(1) = +2
+
+h(n) = 1 + 1 + 2 = 4
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Summary of heuristic:
+
+    My heuristic was able to solve 23 of the 45 challenge problems. It was able to find a solution for all instances of 5 blocks, but
+    had a lot of difficulty with instances of 10 or 20 blocks. I attempted to augment the heuristic with several other "predictions,"
+    but each time, the results yielded a lower success rate. Most of the failing code was entirely removed to avoid clutter, but two such
+    examples still remain. The first example is "if the targeted block is in the wrong stack, then add the number of blocks on top of it
+    plus one." I thought that this would improve the heuristic since a block in the wrong stack can be moved out of that stack by moving
+    all of the blocks on top of it. The additional move accounted for the targeted block itself. Another example is "if the configuration
+    of two blocks is swapped in the current and the goal state (i.e. AB in the current state but BA in the goal state), then add three
+    moves." I implemented this believing that there must be three moves to get the blocks out of this situation, but after realizing that
+    it does not work, I realized that this is quite the misinformation, or rather a lack of information. For this to work accurately
+    and effectively, I would need more details such as whether the blocks are in the correct stack. I was not able to implement this on
+    time, but I hope to try it in the future. Although at first sight the number of goal tests and the maximum queue size seemed to scale
+    with the depth, that was not necessarily the case. However, this makes sense as the priority queue will most likely not explore nodes
+    in order of least to greatest depth. Additionally, my heuristic is not admissible. Thus, there is room for so much more improvement
+    in my heuristic, as I wish to find an admissible solution that is fast and accurate as well.

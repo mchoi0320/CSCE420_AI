@@ -1,0 +1,50 @@
+==================== STATISTICS ====================
+
+FILE              S   B     N OUTCOME
+bwchp01.bwp       3   5 10000 Success! Iterations:    463 | Depth:  12 | Maximum Frontier Size:    146
+bwchp02.bwp       3   5 10000 Success! Iterations:     90 | Depth:   7 | Maximum Frontier Size:     32
+bwchp03.bwp       3   5 10000 Success! Iterations:    522 | Depth:  12 | Maximum Frontier Size:    162
+bwchp04.bwp       3   5 10000 Success! Iterations:   1093 | Depth:   9 | Maximum Frontier Size:    314
+bwchp05.bwp       3   5 10000 Success! Iterations:   1057 | Depth:  14 | Maximum Frontier Size:    330
+bwchp06.bwp       3  10 10000 Success! Iterations:   2020 | Depth:  21 | Maximum Frontier Size:    720
+bwchp07.bwp       3  10 10000 Success! Iterations:  80111 | Depth:  28 | Maximum Frontier Size:  27307
+bwchp08.bwp       3  10 10000 Success! Iterations:  11006 | Depth:  18 | Maximum Frontier Size:   3334
+bwchp09.bwp       3  10 10000 Failure!
+bwchp10.bwp       3  10 10000 Failure!
+bwchp11.bwp       3  20 10000 Failure!
+bwchp12.bwp       3  20 10000 Failure!
+bwchp13.bwp       3  20 10000 Failure!
+bwchp14.bwp       3  20 10000 Failure!
+bwchp15.bwp       3  20 10000 Failure!
+bwchp16.bwp       5   5 10000 Success! Iterations:     38 | Depth:   4 | Maximum Frontier Size:     25
+bwchp17.bwp       5   5 10000 Success! Iterations:    127 | Depth:   5 | Maximum Frontier Size:     78
+bwchp18.bwp       5   5 10000 Success! Iterations:     29 | Depth:   4 | Maximum Frontier Size:     18
+bwchp19.bwp       5   5 10000 Success! Iterations:   1794 | Depth:   9 | Maximum Frontier Size:    724
+bwchp20.bwp       5   5 10000 Success! Iterations:    578 | Depth:   7 | Maximum Frontier Size:    344
+bwchp21.bwp       5  10 10000 Failure!
+bwchp22.bwp       5  10 10000 Success! Iterations:  40630 | Depth:  21 | Maximum Frontier Size:  18231
+bwchp23.bwp       5  10 10000 Failure!
+bwchp24.bwp       5  10 10000 Success! Iterations:  13210 | Depth:  22 | Maximum Frontier Size:   7105
+bwchp25.bwp       5  10 10000 Success! Iterations:  76936 | Depth:  20 | Maximum Frontier Size:  30624
+bwchp26.bwp       5  20 10000 Failure!
+bwchp27.bwp       5  20 10000 Failure!
+bwchp28.bwp       5  20 10000 Failure!
+bwchp29.bwp       5  20 10000 Failure!
+bwchp30.bwp       5  20 10000 Failure!
+bwchp31.bwp      10   5 10000 Success! Iterations:   4589 | Depth:   4 | Maximum Frontier Size:   2591
+bwchp32.bwp      10   5 10000 Success! Iterations:    142 | Depth:   4 | Maximum Frontier Size:    111
+bwchp33.bwp      10   5 10000 Success! Iterations:    214 | Depth:   4 | Maximum Frontier Size:    180
+bwchp34.bwp      10   5 10000 Success! Iterations:  48536 | Depth:   8 | Maximum Frontier Size:  16562
+bwchp35.bwp      10   5 10000 Success! Iterations:    718 | Depth:   5 | Maximum Frontier Size:    470
+bwchp36.bwp      10  10 10000 Failure!
+bwchp37.bwp      10  10 10000 Success! Iterations:  81537 | Depth:  15 | Maximum Frontier Size:  45201
+bwchp38.bwp      10  10 10000 Failure!
+bwchp39.bwp      10  10 10000 Failure!
+bwchp40.bwp      10  10 10000 Success! Iterations:  58288 | Depth:  17 | Maximum Frontier Size:  30988
+bwchp41.bwp      10  20 10000 Failure!
+bwchp42.bwp      10  20 10000 Failure!
+bwchp43.bwp      10  20 10000 Failure!
+bwchp44.bwp      10  20 10000 Failure!
+bwchp45.bwp      10  20 10000 Failure!
+
+Number of tests passed: 23 out of 45

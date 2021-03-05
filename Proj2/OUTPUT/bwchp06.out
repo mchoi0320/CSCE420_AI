@@ -1,0 +1,115 @@
+==================== bwchp06.bwp ====================
+
+Success!
+Iterations: 2020 | Depth: 21 | Maximum Frontier Size: 720
+>>>>>>>>>>
+[MOVE 0]
+ABD
+HI
+CEFGJ
+>>>>>>>>>>
+[MOVE 1]
+ABDJ
+HI
+CEFG
+>>>>>>>>>>
+[MOVE 2]
+ABDJG
+HI
+CEF
+>>>>>>>>>>
+[MOVE 3]
+ABDJGF
+HI
+CE
+>>>>>>>>>>
+[MOVE 4]
+ABDJGFI
+H
+CE
+>>>>>>>>>>
+[MOVE 5]
+ABDJGFIE
+H
+C
+>>>>>>>>>>
+[MOVE 6]
+ABDJGFIE
+HC
+
+>>>>>>>>>>
+[MOVE 7]
+ABDJGFI
+HC
+E
+>>>>>>>>>>
+[MOVE 8]
+ABDJGF
+HC
+EI
+>>>>>>>>>>
+[MOVE 9]
+ABDJG
+HCF
+EI
+>>>>>>>>>>
+[MOVE 10]
+ABDJG
+HCFI
+E
+>>>>>>>>>>
+[MOVE 11]
+ABDJ
+HCFIG
+E
+>>>>>>>>>>
+[MOVE 12]
+ABDJ
+HCFIGE
+
+>>>>>>>>>>
+[MOVE 13]
+ABD
+HCFIGEJ
+
+>>>>>>>>>>
+[MOVE 14]
+AB
+HCFIGEJ
+D
+>>>>>>>>>>
+[MOVE 15]
+AB
+HCFIGE
+DJ
+>>>>>>>>>>
+[MOVE 16]
+ABE
+HCFIG
+DJ
+>>>>>>>>>>
+[MOVE 17]
+ABE
+HCFI
+DJG
+>>>>>>>>>>
+[MOVE 18]
+AB
+HCFI
+DJGE
+>>>>>>>>>>
+[MOVE 19]
+A
+HCFIB
+DJGE
+>>>>>>>>>>
+[MOVE 20]
+
+HCFIB
+DJGEA
+>>>>>>>>>>
+[MOVE 21]
+
+HCFI
+DJGEAB
+>>>>>>>>>>

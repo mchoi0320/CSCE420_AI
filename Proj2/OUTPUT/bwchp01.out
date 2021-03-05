@@ -1,0 +1,70 @@
+==================== bwchp01.bwp ====================
+
+Success!
+Iterations: 463 | Depth: 12 | Maximum Frontier Size: 146
+>>>>>>>>>>
+[MOVE 0]
+
+DE
+ABC
+>>>>>>>>>>
+[MOVE 1]
+E
+D
+ABC
+>>>>>>>>>>
+[MOVE 2]
+ED
+
+ABC
+>>>>>>>>>>
+[MOVE 3]
+ED
+C
+AB
+>>>>>>>>>>
+[MOVE 4]
+EDB
+C
+A
+>>>>>>>>>>
+[MOVE 5]
+EDB
+CA
+
+>>>>>>>>>>
+[MOVE 6]
+ED
+CA
+B
+>>>>>>>>>>
+[MOVE 7]
+E
+CA
+BD
+>>>>>>>>>>
+[MOVE 8]
+E
+C
+BDA
+>>>>>>>>>>
+[MOVE 9]
+
+CE
+BDA
+>>>>>>>>>>
+[MOVE 10]
+A
+CE
+BD
+>>>>>>>>>>
+[MOVE 11]
+A
+CED
+B
+>>>>>>>>>>
+[MOVE 12]
+
+CEDA
+B
+>>>>>>>>>>
