@@ -1,0 +1,44 @@
+(implies C1Y (and (not C2Y) (not C3Y)))
+(implies C2Y (and (not C1Y) (not C3Y)))
+(implies C3Y (and (not C1Y) (not C2Y)))
+(implies C1W (and (not C2W) (not C3W)))
+(implies C2W (and (not C1W) (not C3W)))
+(implies C3W (and (not C1W) (not C2W)))
+(implies C1B (and (not C2B) (not C3B)))
+(implies C2B (and (not C1B) (not C3B)))
+(implies C3B (and (not C1B) (not C2B)))
+(implies L1B (not C1B))
+(implies L2B (not C2B))
+(implies L3B (not C3B))
+(implies L1Y (not C1Y))
+(implies L2Y (not C2Y))
+(implies L3Y (not C3Y))
+(implies L1W (not C1W))
+(implies L2W (not C1W))
+(implies L3W (not C1W))
+(or C1Y C1W C1B)
+(or C2Y C2W C2B)
+(or C3Y C3W C3B)
+(implies O1Y (or C1Y C1B))
+(implies O2Y (or C2Y C2B))
+(implies O3Y (or C3Y C3B))
+(implies O1W (or C1W C1B))
+(implies O2W (or C2W C2B))
+(implies O3W (or C3W C3B))
+O1Y
+L1W
+O2W
+L2Y
+O3Y
+L3B
+(or C3Y C3B)
+(not C3B)
+C3Y
+(and (not C1Y) (not C2Y))
+(or C1Y C1B)
+(not C1Y)
+C1B
+(and (not C2B) (not C3B))
+(not C2B)
+(or C2W C2B)
+C2W

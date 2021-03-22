@@ -1,0 +1,94 @@
+##### CONSTRAINTS #####
+
+# if the box contains only yellow balls, the other two boxes cannot contain only yellow balls
+(implies C1Y (and (not C2Y) (not C3Y)))
+(implies C2Y (and (not C1Y) (not C3Y)))
+(implies C3Y (and (not C1Y) (not C2Y)))
+
+# if the box contains only white balls, the other two boxes cannot contain only white balls
+(implies C1W (and (not C2W) (not C3W)))
+(implies C2W (and (not C1W) (not C3W)))
+(implies C3W (and (not C1W) (not C2W)))
+
+# if the box contains both types of balls, the other two boxes cannot contain both types of balls
+(implies C1B (and (not C2B) (not C3B)))
+(implies C2B (and (not C1B) (not C3B)))
+(implies C3B (and (not C1B) (not C2B)))
+
+# if the box was initially labeled both, it cannot contain both types of balls
+(implies L1B (not C1B))
+(implies L2B (not C2B))
+(implies L3B (not C3B))
+
+# if the box was initially labeled yellow, it cannot contain only yellow balls
+(implies L1Y (not C1Y))
+(implies L2Y (not C2Y))
+(implies L3Y (not C3Y))
+
+# if the box was initially labeled white, it cannot contain only white balls
+(implies L1W (not C1W))
+(implies L2W (not C1W))
+(implies L3W (not C1W))
+
+# there must be at least one box of each color
+(or C1Y C1W C1B)
+(or C2Y C2W C2B)
+(or C3Y C3W C3B)
+
+
+##### IMPLICATIONS #####
+
+# drawing a yellow ball means the box was initially labeled white or both
+# (implies O1Y (or L1W L1B))
+# (implies O2Y (or L2W L2B))
+# (implies O3Y (or L3W L3B))
+
+# drawing a white ball means the box was initially labeled yellow or both
+# (implies O1W (or L1Y L1B))
+# (implies O2W (or L2Y L2B))
+# (implies O3W (or L3Y L3B))
+
+# drawing a yellow ball means the box must contain only yellow or both types of balls
+(implies O1Y (or C1Y C1B))
+(implies O2Y (or C2Y C2B))
+(implies O3Y (or C3Y C3B))
+
+# drawing a white ball means the box must contain only white or both types of balls
+(implies O1W (or C1W C1B))
+(implies O2W (or C2W C2B))
+(implies O3W (or C3W C3B))
+
+
+##### SYMBOLS #####
+
+# O1Y
+# O2Y
+# O3Y
+
+# O1W
+# O2W
+# O3W
+
+# L1Y
+# L2Y
+# L3Y
+
+# L1W
+# L2W
+# L3W
+
+# L1B
+# L2B
+# L3B
+
+# C1Y
+# C2Y
+# C3Y
+
+# C1W
+# C2W
+# C3W
+
+# C1B
+# C2B
+# C3B
