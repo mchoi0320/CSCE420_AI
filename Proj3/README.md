@@ -47,9 +47,13 @@ In the current version of my `NatDed.cpp`:
 
 * some of the ROI functions assume that the arguments are passed in a fixed order or that the argument is formatted in a specific way. The method I currently use to somewhat check the order for the other functions seems far from efficient, which I want to better.
 
+* case-insensitivity is not implemented yet.
+
 ## To be Continued...
 
 - [ ] Modify functions to ensure that the order of arguments does not matter
+
+- [ ] Implement case-insensitivity
 
 - [ ] Improve exception handling
 
