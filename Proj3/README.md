@@ -22,7 +22,7 @@ to compile the program. You have two options when running this program:
 into the command line to see the results.
 
 
-2. If you wish to See the final KB created from the Natural Deduction proof for the Sammy's Sport Shop problem, enter
+2. If you wish to see the final KB created from the Natural Deduction proof for the Sammy's Sport Shop problem, enter
 
 ```
 ./sammys sammys.kb
