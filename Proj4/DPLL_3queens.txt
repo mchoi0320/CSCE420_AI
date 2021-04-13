@@ -1,0 +1,135 @@
+(or Q11 Q21 Q31)
+(or Q12 Q22 Q32)
+(or Q13 Q23 Q33)
+(or Q11 Q12 Q13)
+(or Q21 Q22 Q23)
+(or Q31 Q32 Q33)
+(or (not Q11) (not Q21))
+(or (not Q11) (not Q31))
+(or (not Q21) (not Q31))
+(or (not Q12) (not Q22))
+(or (not Q12) (not Q32))
+(or (not Q22) (not Q32))
+(or (not Q13) (not Q23))
+(or (not Q13) (not Q33))
+(or (not Q23) (not Q33))
+(or (not Q11) (not Q12))
+(or (not Q11) (not Q13))
+(or (not Q12) (not Q13))
+(or (not Q21) (not Q22))
+(or (not Q21) (not Q23))
+(or (not Q22) (not Q23))
+(or (not Q31) (not Q32))
+(or (not Q31) (not Q33))
+(or (not Q32) (not Q33))
+(or (not Q21) (not Q12))
+(or (not Q12) (not Q23))
+(or (not Q31) (not Q22))
+(or (not Q11) (not Q22))
+(or (not Q31) (not Q13))
+(or (not Q11) (not Q33))
+(or (not Q22) (not Q13))
+(or (not Q22) (not Q33))
+(or (not Q21) (not Q32))
+(or (not Q32) (not Q23))
+
+model: Q33=? Q23=? Q13=? Q32=? Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 0 out of 34
+trying Q33=1
+
+model: Q33=T Q23=? Q13=? Q32=? Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 2 out of 34
+forcing Q13=0
+
+model: Q33=T Q23=? Q13=F Q32=? Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 8 out of 34
+forcing Q23=0
+
+model: Q33=T Q23=F Q13=F Q32=? Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 13 out of 34
+forcing Q31=0
+
+model: Q33=T Q23=F Q13=F Q32=? Q22=? Q31=F Q12=? Q21=? Q11=? 
+num clauses satisfied: 18 out of 34
+forcing Q32=0
+
+model: Q33=T Q23=F Q13=F Q32=F Q22=? Q31=F Q12=? Q21=? Q11=? 
+num clauses satisfied: 22 out of 34
+forcing Q11=0
+
+model: Q33=T Q23=F Q13=F Q32=F Q22=? Q31=F Q12=? Q21=? Q11=F 
+num clauses satisfied: 26 out of 34
+forcing Q21=1
+
+model: Q33=T Q23=F Q13=F Q32=F Q22=? Q31=F Q12=? Q21=T Q11=F 
+num clauses satisfied: 28 out of 34
+forcing Q12=1
+
+model: Q33=T Q23=F Q13=F Q32=F Q22=? Q31=F Q12=T Q21=T Q11=F 
+num clauses satisfied: 30 out of 34
+back-tracking...
+trying Q33=0
+
+model: Q33=F Q23=? Q13=? Q32=? Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 6 out of 34
+trying Q32=1
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 8 out of 34
+forcing Q12=0
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=? Q31=? Q12=F Q21=? Q11=? 
+num clauses satisfied: 14 out of 34
+forcing Q22=0
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=F Q31=? Q12=F Q21=? Q11=? 
+num clauses satisfied: 20 out of 34
+forcing Q31=0
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=F Q31=F Q12=F Q21=? Q11=? 
+num clauses satisfied: 24 out of 34
+forcing Q21=0
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=F Q31=F Q12=F Q21=F Q11=? 
+num clauses satisfied: 27 out of 34
+forcing Q11=1
+
+model: Q33=F Q23=? Q13=? Q32=T Q22=F Q31=F Q12=F Q21=F Q11=T 
+num clauses satisfied: 29 out of 34
+forcing Q23=1
+
+model: Q33=F Q23=T Q13=? Q32=T Q22=F Q31=F Q12=F Q21=F Q11=T 
+num clauses satisfied: 31 out of 34
+back-tracking...
+trying Q32=0
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=? Q31=? Q12=? Q21=? Q11=? 
+num clauses satisfied: 11 out of 34
+forcing Q31=1
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=? Q31=T Q12=? Q21=? Q11=? 
+num clauses satisfied: 13 out of 34
+forcing Q11=0
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=? Q31=T Q12=? Q21=? Q11=F 
+num clauses satisfied: 18 out of 34
+forcing Q21=0
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=? Q31=T Q12=? Q21=F Q11=F 
+num clauses satisfied: 22 out of 34
+forcing Q22=0
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=F Q31=T Q12=? Q21=F Q11=F 
+num clauses satisfied: 26 out of 34
+forcing Q12=1
+
+model: Q33=F Q23=? Q13=? Q32=F Q22=F Q31=T Q12=T Q21=F Q11=F 
+num clauses satisfied: 28 out of 34
+forcing Q23=1
+
+model: Q33=F Q23=T Q13=? Q32=F Q22=F Q31=T Q12=T Q21=F Q11=F 
+num clauses satisfied: 30 out of 34
+back-tracking...
+
+unsatisfiable
+number of DPLL calls = 24 (WITH unit-clause heuristic)

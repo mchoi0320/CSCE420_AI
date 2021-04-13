@@ -1,0 +1,125 @@
+<<< Summary >>>
+
+The runs I performed and its results are summarized in the table below.
+
+Input File Names                            Output File Names                   Satisfiable?        Number of DPLL Calls        Back-tracking?
+----------------                            -----------------                   ------------        --------------------        --------------
+mapcolor.cnf                                DPLL_mapcolor.txt                   Yes                 22                          No
+                                            DPLL_mapcolor_without_UCH.txt       Yes                 36                          Yes
+
+mapcolor2.cnf (forces a different           DPLL_mapcolor2.txt                  Yes                 102                         Yes
+               color for Queensland)        DPLL_mapcolor2_without_UCH.txt      Yes                 416                         Yes
+
+mapcolor3.cnf (forces an inconsistency)     DPLL_mapcolor3.txt                  No                  18                          Yes
+                                            DPLL_mapcolor3_without_UCH.txt      No                  301                         Yes
+
+3queens.cnf                                 DPLL_3queens.txt                    No                  24                          Yes
+
+4queens.cnf                                 DPLL_4queens.txt                    Yes                 37                          Yes
+
+6queens.cnf                                 DPLL_6queens.txt                    Yes                 142                         Yes
+
+
+<<< Models >>>
+
+From DPLL_mapcolor.txt & DPLL_mapcolor_without_UCH.txt:
+NSWB = T
+QB = F
+VB = F
+QG = F
+VR = T
+QR = T
+VG = F
+SAB = F
+NTB = T
+NSWR = F
+TG = F
+NSWG = F
+TR = T
+TB = F
+WAR = T
+WAG = F
+WAB = F
+NTR = F
+NTG = F
+SAR = F
+SAG = T
+
+From DPLL_mapcolor2.txt & DPLL_mapcolor2_without_UCH.txt:
+NSWB = T
+QB = F
+VB = F
+QG = T
+VR = F
+QR = F
+VG = T
+SAB = F
+NTB = T
+NSWR = F
+TG = F
+NSWG = F
+TR = T
+TB = F
+WAR = F
+WAG = T
+WAB = F
+NTR = F
+NTG = F
+SAR = T
+SAG = F
+
+From DPLL_4queens.txt:
+Q24 = T
+Q14 = F
+Q43 = T
+Q11 = F
+Q41 = F
+Q34 = F
+Q33 = F
+Q21 = F
+Q12 = T
+Q31 = T
+Q22 = F
+Q32 = F
+Q13 = F
+Q42 = F
+Q44 = F
+Q23 = F
+
+From DPLL_6queens.txt:
+Q46 = F
+Q16 = F
+Q55 = F
+Q45 = F
+Q65 = T
+Q35 = F
+Q25 = F
+Q15 = F
+Q64 = F
+Q54 = F
+Q66 = F
+Q42 = F
+Q36 = T
+Q53 = T
+Q22 = F
+Q31 = F
+Q32 = F
+Q52 = F
+Q62 = F
+Q12 = T
+Q21 = F
+Q33 = F
+Q34 = F
+Q51 = F
+Q41 = T
+Q56 = F
+Q11 = F
+Q23 = F
+Q13 = F
+Q44 = F
+Q61 = F
+Q43 = F
+Q26 = F
+Q63 = F
+Q14 = F
+Q24 = T
