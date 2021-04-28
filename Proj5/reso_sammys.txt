@@ -1,0 +1,284 @@
+0.     (or C1Y C1W C1B)
+1.     (or C2Y C2W C2B)
+2.     (or C3Y C3W C3B)
+3.     (or (not L1B) (not C1B))
+4.     (or (not L2B) (not C2B))
+5.     (or (not L3B) (not C3B))
+6.     (or (not L1Y) (not C1Y))
+7.     (or (not L2Y) (not C2Y))
+8.     (or (not L3Y) (not C3Y))
+9.     (or (not L1W) (not C1W))
+10.    (or (not L2W) (not C2W))
+11.    (or (not L3W) (not C3W))
+12.    (or (not C1Y) (not C2Y))
+13.    (or (not C1Y) (not C3Y))
+14.    (or (not C2Y) (not C1Y))
+15.    (or (not C2Y) (not C3Y))
+16.    (or (not C3Y) (not C1Y))
+17.    (or (not C3Y) (not C2Y))
+18.    (or (not C1W) (not C2W))
+19.    (or (not C1W) (not C3W))
+20.    (or (not C2W) (not C1W))
+21.    (or (not C2W) (not C3W))
+22.    (or (not C3W) (not C1W))
+23.    (or (not C3W) (not C2W))
+24.    (or (not C1B) (not C2B))
+25.    (or (not C1B) (not C3B))
+26.    (or (not C2B) (not C1B))
+27.    (or (not C2B) (not C3B))
+28.    (or (not C3B) (not C1B))
+29.    (or (not C3B) (not C2B))
+30.    (or (not O1Y) C1Y C1B)
+31.    (or (not O2Y) C2Y C2B)
+32.    (or (not O3Y) C3Y C3B)
+33.    (or (not O1W) C1W C1B)
+34.    (or (not O2W) C2W C2B)
+35.    (or (not O3W) C3W C3B)
+36.    (or O1Y)
+37.    (or L1W)
+38.    (or O2W)
+39.    (or L2Y)
+40.    (or O3Y)
+41.    (or L3B)
+42.    (or (not C2W))
+
+---< ITERATION 0 >---
+Number of clauses: 43
+Resolving clauses 30 & 36: (or (not O1Y) C1Y C1B) , (or O1Y)
+Resolvent = (or C1Y C1B)
+43.    (or C1Y C1B)
+
+---< ITERATION 1 >---
+Number of clauses: 44
+Resolving clauses 9 & 37: (or (not L1W) (not C1W)) , (or L1W)
+Resolvent = (or (not C1W))
+44.    (or (not C1W))
+
+---< ITERATION 2 >---
+Number of clauses: 45
+Resolving clauses 1 & 42: (or C2Y C2W C2B) , (or (not C2W))
+Resolvent = (or C2Y C2B)
+45.    (or C2Y C2B)
+
+---< ITERATION 3 >---
+Number of clauses: 46
+Resolving clauses 34 & 42: (or (not O2W) C2W C2B) , (or (not C2W))
+Resolvent = (or (not O2W) C2B)
+46.    (or (not O2W) C2B)
+
+---< ITERATION 4 >---
+Number of clauses: 47
+Resolving clauses 0 & 44: (or C1Y C1W C1B) , (or (not C1W))
+Resolvent = (or C1Y C1B)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 5 >---
+Number of clauses: 47
+Resolving clauses 33 & 44: (or (not O1W) C1W C1B) , (or (not C1W))
+Resolvent = (or (not O1W) C1B)
+47.    (or (not O1W) C1B)
+
+---< ITERATION 6 >---
+Number of clauses: 48
+Resolving clauses 34 & 38: (or (not O2W) C2W C2B) , (or O2W)
+Resolvent = (or C2W C2B)
+48.    (or C2W C2B)
+
+---< ITERATION 7 >---
+Number of clauses: 49
+Resolving clauses 7 & 39: (or (not L2Y) (not C2Y)) , (or L2Y)
+Resolvent = (or (not C2Y))
+49.    (or (not C2Y))
+
+---< ITERATION 8 >---
+Number of clauses: 50
+Resolving clauses 32 & 40: (or (not O3Y) C3Y C3B) , (or O3Y)
+Resolvent = (or C3Y C3B)
+50.    (or C3Y C3B)
+
+---< ITERATION 9 >---
+Number of clauses: 51
+Resolving clauses 5 & 41: (or (not L3B) (not C3B)) , (or L3B)
+Resolvent = (or (not C3B))
+51.    (or (not C3B))
+
+---< ITERATION 10 >---
+Number of clauses: 52
+Resolving clauses 38 & 46: (or O2W) , (or (not O2W) C2B)
+Resolvent = (or C2B)
+52.    (or C2B)
+
+---< ITERATION 11 >---
+Number of clauses: 53
+Resolving clauses 42 & 48: (or (not C2W)) , (or C2W C2B)
+Resolvent = (or C2B)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 12 >---
+Number of clauses: 53
+Resolving clauses 2 & 51: (or C3Y C3W C3B) , (or (not C3B))
+Resolvent = (or C3Y C3W)
+53.    (or C3Y C3W)
+
+---< ITERATION 13 >---
+Number of clauses: 54
+Resolving clauses 32 & 51: (or (not O3Y) C3Y C3B) , (or (not C3B))
+Resolvent = (or (not O3Y) C3Y)
+54.    (or (not O3Y) C3Y)
+
+---< ITERATION 14 >---
+Number of clauses: 55
+Resolving clauses 35 & 51: (or (not O3W) C3W C3B) , (or (not C3B))
+Resolvent = (or (not O3W) C3W)
+55.    (or (not O3W) C3W)
+
+---< ITERATION 15 >---
+Number of clauses: 56
+Resolving clauses 29 & 52: (or (not C3B) (not C2B)) , (or C2B)
+Resolvent = (or (not C3B))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 16 >---
+Number of clauses: 56
+Resolving clauses 50 & 51: (or C3Y C3B) , (or (not C3B))
+Resolvent = (or C3Y)
+56.    (or C3Y)
+
+---< ITERATION 17 >---
+Number of clauses: 57
+Resolving clauses 40 & 54: (or O3Y) , (or (not O3Y) C3Y)
+Resolvent = (or C3Y)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 18 >---
+Number of clauses: 57
+Resolving clauses 4 & 52: (or (not L2B) (not C2B)) , (or C2B)
+Resolvent = (or (not L2B))
+57.    (or (not L2B))
+
+---< ITERATION 19 >---
+Number of clauses: 58
+Resolving clauses 26 & 52: (or (not C2B) (not C1B)) , (or C2B)
+Resolvent = (or (not C1B))
+58.    (or (not C1B))
+
+---< ITERATION 20 >---
+Number of clauses: 59
+Resolving clauses 8 & 56: (or (not L3Y) (not C3Y)) , (or C3Y)
+Resolvent = (or (not L3Y))
+59.    (or (not L3Y))
+
+---< ITERATION 21 >---
+Number of clauses: 60
+Resolving clauses 13 & 56: (or (not C1Y) (not C3Y)) , (or C3Y)
+Resolvent = (or (not C1Y))
+60.    (or (not C1Y))
+
+---< ITERATION 22 >---
+Number of clauses: 61
+Resolving clauses 17 & 56: (or (not C3Y) (not C2Y)) , (or C3Y)
+Resolvent = (or (not C2Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 23 >---
+Number of clauses: 61
+Resolving clauses 15 & 56: (or (not C2Y) (not C3Y)) , (or C3Y)
+Resolvent = (or (not C2Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 24 >---
+Number of clauses: 61
+Resolving clauses 16 & 56: (or (not C3Y) (not C1Y)) , (or C3Y)
+Resolvent = (or (not C1Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 25 >---
+Number of clauses: 61
+Resolving clauses 33 & 58: (or (not O1W) C1W C1B) , (or (not C1B))
+Resolvent = (or (not O1W) C1W)
+61.    (or (not O1W) C1W)
+
+---< ITERATION 26 >---
+Number of clauses: 62
+Resolving clauses 47 & 58: (or (not O1W) C1B) , (or (not C1B))
+Resolvent = (or (not O1W))
+62.    (or (not O1W))
+
+---< ITERATION 27 >---
+Number of clauses: 63
+Resolving clauses 44 & 61: (or (not C1W)) , (or (not O1W) C1W)
+Resolvent = (or (not O1W))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 28 >---
+Number of clauses: 63
+Resolving clauses 43 & 58: (or C1Y C1B) , (or (not C1B))
+Resolvent = (or C1Y)
+63.    (or C1Y)
+
+---< ITERATION 29 >---
+Number of clauses: 64
+Resolving clauses 30 & 60: (or (not O1Y) C1Y C1B) , (or (not C1Y))
+Resolvent = (or (not O1Y) C1B)
+64.    (or (not O1Y) C1B)
+
+---< ITERATION 30 >---
+Number of clauses: 65
+Resolving clauses 12 & 63: (or (not C1Y) (not C2Y)) , (or C1Y)
+Resolvent = (or (not C2Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 31 >---
+Number of clauses: 65
+Resolving clauses 13 & 63: (or (not C1Y) (not C3Y)) , (or C1Y)
+Resolvent = (or (not C3Y))
+65.    (or (not C3Y))
+
+---< ITERATION 32 >---
+Number of clauses: 66
+Resolving clauses 14 & 63: (or (not C2Y) (not C1Y)) , (or C1Y)
+Resolvent = (or (not C2Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 33 >---
+Number of clauses: 66
+Resolving clauses 16 & 63: (or (not C3Y) (not C1Y)) , (or C1Y)
+Resolvent = (or (not C3Y))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 34 >---
+Number of clauses: 66
+Resolving clauses 36 & 64: (or O1Y) , (or (not O1Y) C1B)
+Resolvent = (or C1B)
+66.    (or C1B)
+
+---< ITERATION 35 >---
+Number of clauses: 67
+Resolving clauses 58 & 64: (or (not C1B)) , (or (not O1Y) C1B)
+Resolvent = (or (not O1Y))
+67.    (or (not O1Y))
+
+---< ITERATION 36 >---
+Number of clauses: 68
+Resolving clauses 2 & 65: (or C3Y C3W C3B) , (or (not C3Y))
+Resolvent = (or C3W C3B)
+68.    (or C3W C3B)
+
+---< ITERATION 37 >---
+Number of clauses: 69
+Resolving clauses 53 & 65: (or C3Y C3W) , (or (not C3Y))
+Resolvent = (or C3W)
+69.    (or C3W)
+
+---< ITERATION 38 >---
+Number of clauses: 70
+Resolving clauses 28 & 66: (or (not C3B) (not C1B)) , (or C1B)
+Resolvent = (or (not C3B))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 39 >---
+Number of clauses: 70
+Resolving clauses 58 & 66: (or (not C1B)) , (or C1B)
+Resolvent = (or)
+
+Success! An empty clause was derived, so C2W is entailed.

@@ -1,0 +1,693 @@
+0.     (or (not pit14) breeze13)
+1.     (or (not pit14) breeze24)
+2.     (or (not pit24) breeze23)
+3.     (or (not pit24) breeze34)
+4.     (or (not pit24) breeze14)
+5.     (or (not pit34) breeze33)
+6.     (or (not pit34) breeze44)
+7.     (or (not pit34) breeze24)
+8.     (or (not pit44) breeze43)
+9.     (or (not pit44) breeze34)
+10.    (or (not pit13) breeze14)
+11.    (or (not pit13) breeze12)
+12.    (or (not pit13) breeze23)
+13.    (or (not pit23) breeze24)
+14.    (or (not pit23) breeze22)
+15.    (or (not pit23) breeze33)
+16.    (or (not pit23) breeze13)
+17.    (or (not pit33) breeze34)
+18.    (or (not pit33) breeze32)
+19.    (or (not pit33) breeze43)
+20.    (or (not pit33) breeze23)
+21.    (or (not pit43) breeze44)
+22.    (or (not pit43) breeze42)
+23.    (or (not pit43) breeze33)
+24.    (or (not pit12) breeze13)
+25.    (or (not pit12) breeze11)
+26.    (or (not pit12) breeze22)
+27.    (or (not pit22) breeze23)
+28.    (or (not pit22) breeze21)
+29.    (or (not pit22) breeze32)
+30.    (or (not pit22) breeze12)
+31.    (or (not pit32) breeze33)
+32.    (or (not pit32) breeze31)
+33.    (or (not pit32) breeze42)
+34.    (or (not pit32) breeze22)
+35.    (or (not pit42) breeze43)
+36.    (or (not pit42) breeze41)
+37.    (or (not pit42) breeze32)
+38.    (or (not pit11) breeze12)
+39.    (or (not pit11) breeze21)
+40.    (or (not pit21) breeze22)
+41.    (or (not pit21) breeze31)
+42.    (or (not pit21) breeze11)
+43.    (or (not pit31) breeze32)
+44.    (or (not pit31) breeze41)
+45.    (or (not pit31) breeze21)
+46.    (or (not pit41) breeze42)
+47.    (or (not pit41) breeze31)
+48.    (or (not wumpus14) stench13)
+49.    (or (not wumpus14) stench24)
+50.    (or (not wumpus24) stench23)
+51.    (or (not wumpus24) stench34)
+52.    (or (not wumpus24) stench14)
+53.    (or (not wumpus34) stench33)
+54.    (or (not wumpus34) stench44)
+55.    (or (not wumpus34) stench24)
+56.    (or (not wumpus44) stench43)
+57.    (or (not wumpus44) stench34)
+58.    (or (not wumpus13) stench14)
+59.    (or (not wumpus13) stench12)
+60.    (or (not wumpus13) stench23)
+61.    (or (not wumpus23) stench24)
+62.    (or (not wumpus23) stench22)
+63.    (or (not wumpus23) stench33)
+64.    (or (not wumpus23) stench13)
+65.    (or (not wumpus33) stench34)
+66.    (or (not wumpus33) stench32)
+67.    (or (not wumpus33) stench43)
+68.    (or (not wumpus33) stench23)
+69.    (or (not wumpus43) stench44)
+70.    (or (not wumpus43) stench42)
+71.    (or (not wumpus43) stench33)
+72.    (or (not wumpus12) stench13)
+73.    (or (not wumpus12) stench11)
+74.    (or (not wumpus12) stench22)
+75.    (or (not wumpus22) stench23)
+76.    (or (not wumpus22) stench21)
+77.    (or (not wumpus22) stench32)
+78.    (or (not wumpus22) stench12)
+79.    (or (not wumpus32) stench33)
+80.    (or (not wumpus32) stench31)
+81.    (or (not wumpus32) stench42)
+82.    (or (not wumpus32) stench22)
+83.    (or (not wumpus42) stench43)
+84.    (or (not wumpus42) stench41)
+85.    (or (not wumpus42) stench32)
+86.    (or (not wumpus11) stench12)
+87.    (or (not wumpus11) stench21)
+88.    (or (not wumpus21) stench22)
+89.    (or (not wumpus21) stench31)
+90.    (or (not wumpus21) stench11)
+91.    (or (not wumpus31) stench32)
+92.    (or (not wumpus31) stench41)
+93.    (or (not wumpus31) stench21)
+94.    (or (not wumpus41) stench42)
+95.    (or (not wumpus41) stench31)
+96.    (or breeze14 (not pit13))
+97.    (or breeze14 (not pit24))
+98.    (or breeze24 (not pit23))
+99.    (or breeze24 (not pit34))
+100.   (or breeze24 (not pit14))
+101.   (or breeze34 (not pit33))
+102.   (or breeze34 (not pit44))
+103.   (or breeze34 (not pit24))
+104.   (or breeze44 (not pit43))
+105.   (or breeze44 (not pit34))
+106.   (or breeze13 (not pit14))
+107.   (or breeze13 (not pit12))
+108.   (or breeze13 (not pit23))
+109.   (or breeze23 (not pit24))
+110.   (or breeze23 (not pit22))
+111.   (or breeze23 (not pit33))
+112.   (or breeze23 (not pit13))
+113.   (or breeze33 (not pit34))
+114.   (or breeze33 (not pit32))
+115.   (or breeze33 (not pit43))
+116.   (or breeze33 (not pit23))
+117.   (or breeze43 (not pit44))
+118.   (or breeze43 (not pit42))
+119.   (or breeze43 (not pit33))
+120.   (or breeze12 (not pit13))
+121.   (or breeze12 (not pit11))
+122.   (or breeze12 (not pit22))
+123.   (or breeze22 (not pit23))
+124.   (or breeze22 (not pit21))
+125.   (or breeze22 (not pit32))
+126.   (or breeze22 (not pit12))
+127.   (or breeze32 (not pit33))
+128.   (or breeze32 (not pit31))
+129.   (or breeze32 (not pit42))
+130.   (or breeze32 (not pit22))
+131.   (or breeze42 (not pit43))
+132.   (or breeze42 (not pit41))
+133.   (or breeze42 (not pit32))
+134.   (or breeze11 (not pit12))
+135.   (or breeze11 (not pit21))
+136.   (or breeze21 (not pit22))
+137.   (or breeze21 (not pit31))
+138.   (or breeze21 (not pit11))
+139.   (or breeze31 (not pit32))
+140.   (or breeze31 (not pit41))
+141.   (or breeze31 (not pit21))
+142.   (or breeze41 (not pit42))
+143.   (or breeze41 (not pit31))
+144.   (or stench14 (not wumpus13))
+145.   (or stench14 (not wumpus24))
+146.   (or stench24 (not wumpus23))
+147.   (or stench24 (not wumpus34))
+148.   (or stench24 (not wumpus14))
+149.   (or stench34 (not wumpus33))
+150.   (or stench34 (not wumpus44))
+151.   (or stench34 (not wumpus24))
+152.   (or stench44 (not wumpus43))
+153.   (or stench44 (not wumpus34))
+154.   (or stench13 (not wumpus14))
+155.   (or stench13 (not wumpus12))
+156.   (or stench13 (not wumpus23))
+157.   (or stench23 (not wumpus24))
+158.   (or stench23 (not wumpus22))
+159.   (or stench23 (not wumpus33))
+160.   (or stench23 (not wumpus13))
+161.   (or stench33 (not wumpus34))
+162.   (or stench33 (not wumpus32))
+163.   (or stench33 (not wumpus43))
+164.   (or stench33 (not wumpus23))
+165.   (or stench43 (not wumpus44))
+166.   (or stench43 (not wumpus42))
+167.   (or stench43 (not wumpus33))
+168.   (or stench12 (not wumpus13))
+169.   (or stench12 (not wumpus11))
+170.   (or stench12 (not wumpus22))
+171.   (or stench22 (not wumpus23))
+172.   (or stench22 (not wumpus21))
+173.   (or stench22 (not wumpus32))
+174.   (or stench22 (not wumpus12))
+175.   (or stench32 (not wumpus33))
+176.   (or stench32 (not wumpus31))
+177.   (or stench32 (not wumpus42))
+178.   (or stench32 (not wumpus22))
+179.   (or stench42 (not wumpus43))
+180.   (or stench42 (not wumpus41))
+181.   (or stench42 (not wumpus32))
+182.   (or stench11 (not wumpus12))
+183.   (or stench11 (not wumpus21))
+184.   (or stench21 (not wumpus22))
+185.   (or stench21 (not wumpus31))
+186.   (or stench21 (not wumpus11))
+187.   (or stench31 (not wumpus32))
+188.   (or stench31 (not wumpus41))
+189.   (or stench31 (not wumpus21))
+190.   (or stench41 (not wumpus42))
+191.   (or stench41 (not wumpus31))
+192.   (or (not wumpus11) (not wumpus12))
+193.   (or (not wumpus11) (not wumpus13))
+194.   (or (not wumpus11) (not wumpus14))
+195.   (or (not wumpus11) (not wumpus21))
+196.   (or (not wumpus11) (not wumpus22))
+197.   (or (not wumpus11) (not wumpus23))
+198.   (or (not wumpus11) (not wumpus24))
+199.   (or (not wumpus11) (not wumpus31))
+200.   (or (not wumpus11) (not wumpus32))
+201.   (or (not wumpus11) (not wumpus33))
+202.   (or (not wumpus11) (not wumpus34))
+203.   (or (not wumpus11) (not wumpus41))
+204.   (or (not wumpus11) (not wumpus42))
+205.   (or (not wumpus11) (not wumpus43))
+206.   (or (not wumpus11) (not wumpus44))
+207.   (or (not wumpus12) (not wumpus13))
+208.   (or (not wumpus12) (not wumpus14))
+209.   (or (not wumpus12) (not wumpus21))
+210.   (or (not wumpus12) (not wumpus22))
+211.   (or (not wumpus12) (not wumpus23))
+212.   (or (not wumpus12) (not wumpus24))
+213.   (or (not wumpus12) (not wumpus31))
+214.   (or (not wumpus12) (not wumpus32))
+215.   (or (not wumpus12) (not wumpus33))
+216.   (or (not wumpus12) (not wumpus34))
+217.   (or (not wumpus12) (not wumpus41))
+218.   (or (not wumpus12) (not wumpus42))
+219.   (or (not wumpus12) (not wumpus43))
+220.   (or (not wumpus12) (not wumpus44))
+221.   (or (not wumpus13) (not wumpus14))
+222.   (or (not wumpus13) (not wumpus21))
+223.   (or (not wumpus13) (not wumpus22))
+224.   (or (not wumpus13) (not wumpus23))
+225.   (or (not wumpus13) (not wumpus24))
+226.   (or (not wumpus13) (not wumpus31))
+227.   (or (not wumpus13) (not wumpus32))
+228.   (or (not wumpus13) (not wumpus33))
+229.   (or (not wumpus13) (not wumpus34))
+230.   (or (not wumpus13) (not wumpus41))
+231.   (or (not wumpus13) (not wumpus42))
+232.   (or (not wumpus13) (not wumpus43))
+233.   (or (not wumpus13) (not wumpus44))
+234.   (or (not wumpus14) (not wumpus21))
+235.   (or (not wumpus14) (not wumpus22))
+236.   (or (not wumpus14) (not wumpus23))
+237.   (or (not wumpus14) (not wumpus24))
+238.   (or (not wumpus14) (not wumpus31))
+239.   (or (not wumpus14) (not wumpus32))
+240.   (or (not wumpus14) (not wumpus33))
+241.   (or (not wumpus14) (not wumpus34))
+242.   (or (not wumpus14) (not wumpus41))
+243.   (or (not wumpus14) (not wumpus42))
+244.   (or (not wumpus14) (not wumpus43))
+245.   (or (not wumpus14) (not wumpus44))
+246.   (or (not wumpus21) (not wumpus22))
+247.   (or (not wumpus21) (not wumpus23))
+248.   (or (not wumpus21) (not wumpus24))
+249.   (or (not wumpus21) (not wumpus31))
+250.   (or (not wumpus21) (not wumpus32))
+251.   (or (not wumpus21) (not wumpus33))
+252.   (or (not wumpus21) (not wumpus34))
+253.   (or (not wumpus21) (not wumpus41))
+254.   (or (not wumpus21) (not wumpus42))
+255.   (or (not wumpus21) (not wumpus43))
+256.   (or (not wumpus21) (not wumpus44))
+257.   (or (not wumpus22) (not wumpus23))
+258.   (or (not wumpus22) (not wumpus24))
+259.   (or (not wumpus22) (not wumpus31))
+260.   (or (not wumpus22) (not wumpus32))
+261.   (or (not wumpus22) (not wumpus33))
+262.   (or (not wumpus22) (not wumpus34))
+263.   (or (not wumpus22) (not wumpus41))
+264.   (or (not wumpus22) (not wumpus42))
+265.   (or (not wumpus22) (not wumpus43))
+266.   (or (not wumpus22) (not wumpus44))
+267.   (or (not wumpus23) (not wumpus24))
+268.   (or (not wumpus23) (not wumpus31))
+269.   (or (not wumpus23) (not wumpus32))
+270.   (or (not wumpus23) (not wumpus33))
+271.   (or (not wumpus23) (not wumpus34))
+272.   (or (not wumpus23) (not wumpus41))
+273.   (or (not wumpus23) (not wumpus42))
+274.   (or (not wumpus23) (not wumpus43))
+275.   (or (not wumpus23) (not wumpus44))
+276.   (or (not wumpus24) (not wumpus31))
+277.   (or (not wumpus24) (not wumpus32))
+278.   (or (not wumpus24) (not wumpus33))
+279.   (or (not wumpus24) (not wumpus34))
+280.   (or (not wumpus24) (not wumpus41))
+281.   (or (not wumpus24) (not wumpus42))
+282.   (or (not wumpus24) (not wumpus43))
+283.   (or (not wumpus24) (not wumpus44))
+284.   (or (not wumpus31) (not wumpus32))
+285.   (or (not wumpus31) (not wumpus33))
+286.   (or (not wumpus31) (not wumpus34))
+287.   (or (not wumpus31) (not wumpus41))
+288.   (or (not wumpus31) (not wumpus42))
+289.   (or (not wumpus31) (not wumpus43))
+290.   (or (not wumpus31) (not wumpus44))
+291.   (or (not wumpus32) (not wumpus33))
+292.   (or (not wumpus32) (not wumpus34))
+293.   (or (not wumpus32) (not wumpus41))
+294.   (or (not wumpus32) (not wumpus42))
+295.   (or (not wumpus32) (not wumpus43))
+296.   (or (not wumpus32) (not wumpus44))
+297.   (or (not wumpus33) (not wumpus34))
+298.   (or (not wumpus33) (not wumpus41))
+299.   (or (not wumpus33) (not wumpus42))
+300.   (or (not wumpus33) (not wumpus43))
+301.   (or (not wumpus33) (not wumpus44))
+302.   (or (not wumpus34) (not wumpus41))
+303.   (or (not wumpus34) (not wumpus42))
+304.   (or (not wumpus34) (not wumpus43))
+305.   (or (not wumpus34) (not wumpus44))
+306.   (or (not wumpus41) (not wumpus42))
+307.   (or (not wumpus41) (not wumpus43))
+308.   (or (not wumpus41) (not wumpus44))
+309.   (or (not wumpus42) (not wumpus43))
+310.   (or (not wumpus42) (not wumpus44))
+311.   (or (not wumpus43) (not wumpus44))
+312.   (or (not visited14) (not wumpus14))
+313.   (or (not visited14) (not pit14))
+314.   (or (not visited24) (not wumpus24))
+315.   (or (not visited24) (not pit24))
+316.   (or (not visited34) (not wumpus34))
+317.   (or (not visited34) (not pit34))
+318.   (or (not visited44) (not wumpus44))
+319.   (or (not visited44) (not pit44))
+320.   (or (not visited13) (not wumpus13))
+321.   (or (not visited13) (not pit13))
+322.   (or (not visited23) (not wumpus23))
+323.   (or (not visited23) (not pit23))
+324.   (or (not visited33) (not wumpus33))
+325.   (or (not visited33) (not pit33))
+326.   (or (not visited43) (not wumpus43))
+327.   (or (not visited43) (not pit43))
+328.   (or (not visited12) (not wumpus12))
+329.   (or (not visited12) (not pit12))
+330.   (or (not visited22) (not wumpus22))
+331.   (or (not visited22) (not pit22))
+332.   (or (not visited32) (not wumpus32))
+333.   (or (not visited32) (not pit32))
+334.   (or (not visited42) (not wumpus42))
+335.   (or (not visited42) (not pit42))
+336.   (or (not visited11) (not wumpus11))
+337.   (or (not visited11) (not pit11))
+338.   (or (not visited21) (not wumpus21))
+339.   (or (not visited21) (not pit21))
+340.   (or (not visited31) (not wumpus31))
+341.   (or (not visited31) (not pit31))
+342.   (or (not visited41) (not wumpus41))
+343.   (or (not visited41) (not pit41))
+344.   (or wumpus14 safe14)
+345.   (or pit14 safe14)
+346.   (or wumpus24 safe24)
+347.   (or pit24 safe24)
+348.   (or wumpus34 safe34)
+349.   (or pit34 safe34)
+350.   (or wumpus44 safe44)
+351.   (or pit44 safe44)
+352.   (or wumpus13 safe13)
+353.   (or pit13 safe13)
+354.   (or wumpus23 safe23)
+355.   (or pit23 safe23)
+356.   (or wumpus33 safe33)
+357.   (or pit33 safe33)
+358.   (or wumpus43 safe43)
+359.   (or pit43 safe43)
+360.   (or wumpus12 safe12)
+361.   (or pit12 safe12)
+362.   (or wumpus22 safe22)
+363.   (or pit22 safe22)
+364.   (or wumpus32 safe32)
+365.   (or pit32 safe32)
+366.   (or wumpus42 safe42)
+367.   (or pit42 safe42)
+368.   (or wumpus11 safe11)
+369.   (or pit11 safe11)
+370.   (or wumpus21 safe21)
+371.   (or pit21 safe21)
+372.   (or wumpus31 safe31)
+373.   (or pit31 safe31)
+374.   (or wumpus41 safe41)
+375.   (or pit41 safe41)
+376.   (or visited14)
+377.   (or (not breeze14))
+378.   (or (not stench14))
+379.   (or visited24)
+380.   (or breeze24)
+381.   (or (not stench24))
+382.   (or visited34)
+383.   (or (not breeze34))
+384.   (or stench34)
+385.   (or visited44)
+386.   (or (not breeze44))
+387.   (or (not stench44))
+388.   (or visited13)
+389.   (or breeze13)
+390.   (or (not stench13))
+391.   (or visited12)
+392.   (or (not breeze12))
+393.   (or (not stench12))
+394.   (or visited22)
+395.   (or breeze22)
+396.   (or (not stench22))
+397.   (or visited32)
+398.   (or (not breeze32))
+399.   (or stench32)
+400.   (or visited42)
+401.   (or breeze42)
+402.   (or (not stench42))
+403.   (or (not safe43))
+
+---< ITERATION 0 >---
+Number of clauses: 404
+Resolving clauses 312 & 376: (or (not visited14) (not wumpus14)) , (or visited14)
+Resolvent = (or (not wumpus14))
+404.   (or (not wumpus14))
+
+---< ITERATION 1 >---
+Number of clauses: 405
+Resolving clauses 313 & 376: (or (not visited14) (not pit14)) , (or visited14)
+Resolvent = (or (not pit14))
+405.   (or (not pit14))
+
+---< ITERATION 2 >---
+Number of clauses: 406
+Resolving clauses 4 & 377: (or (not pit24) breeze14) , (or (not breeze14))
+Resolvent = (or (not pit24))
+406.   (or (not pit24))
+
+---< ITERATION 3 >---
+Number of clauses: 407
+Resolving clauses 146 & 381: (or stench24 (not wumpus23)) , (or (not stench24))
+Resolvent = (or (not wumpus23))
+407.   (or (not wumpus23))
+
+---< ITERATION 4 >---
+Number of clauses: 408
+Resolving clauses 105 & 386: (or breeze44 (not pit34)) , (or (not breeze44))
+Resolvent = (or (not pit34))
+408.   (or (not pit34))
+
+---< ITERATION 5 >---
+Number of clauses: 409
+Resolving clauses 64 & 390: (or (not wumpus23) stench13) , (or (not stench13))
+Resolvent = (or (not wumpus23))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 6 >---
+Number of clauses: 409
+Resolving clauses 156 & 390: (or stench13 (not wumpus23)) , (or (not stench13))
+Resolvent = (or (not wumpus23))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 7 >---
+Number of clauses: 409
+Resolving clauses 329 & 391: (or (not visited12) (not pit12)) , (or visited12)
+Resolvent = (or (not pit12))
+409.   (or (not pit12))
+
+---< ITERATION 8 >---
+Number of clauses: 410
+Resolving clauses 11 & 392: (or (not pit13) breeze12) , (or (not breeze12))
+Resolvent = (or (not pit13))
+410.   (or (not pit13))
+
+---< ITERATION 9 >---
+Number of clauses: 411
+Resolving clauses 328 & 391: (or (not visited12) (not wumpus12)) , (or visited12)
+Resolvent = (or (not wumpus12))
+411.   (or (not wumpus12))
+
+---< ITERATION 10 >---
+Number of clauses: 412
+Resolving clauses 347 & 406: (or pit24 safe24) , (or (not pit24))
+Resolvent = (or safe24)
+412.   (or safe24)
+
+---< ITERATION 11 >---
+Number of clauses: 413
+Resolving clauses 354 & 407: (or wumpus23 safe23) , (or (not wumpus23))
+Resolvent = (or safe23)
+413.   (or safe23)
+
+---< ITERATION 12 >---
+Number of clauses: 414
+Resolving clauses 349 & 408: (or pit34 safe34) , (or (not pit34))
+Resolvent = (or safe34)
+414.   (or safe34)
+
+---< ITERATION 13 >---
+Number of clauses: 415
+Resolving clauses 358 & 403: (or wumpus43 safe43) , (or (not safe43))
+Resolvent = (or wumpus43)
+415.   (or wumpus43)
+
+---< ITERATION 14 >---
+Number of clauses: 416
+Resolving clauses 72 & 390: (or (not wumpus12) stench13) , (or (not stench13))
+Resolvent = (or (not wumpus12))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 15 >---
+Number of clauses: 416
+Resolving clauses 154 & 390: (or stench13 (not wumpus14)) , (or (not stench13))
+Resolvent = (or (not wumpus14))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 16 >---
+Number of clauses: 416
+Resolving clauses 155 & 390: (or stench13 (not wumpus12)) , (or (not stench13))
+Resolvent = (or (not wumpus12))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 17 >---
+Number of clauses: 416
+Resolving clauses 361 & 409: (or pit12 safe12) , (or (not pit12))
+Resolvent = (or safe12)
+416.   (or safe12)
+
+---< ITERATION 18 >---
+Number of clauses: 417
+Resolving clauses 353 & 410: (or pit13 safe13) , (or (not pit13))
+Resolvent = (or safe13)
+417.   (or safe13)
+
+---< ITERATION 19 >---
+Number of clauses: 418
+Resolving clauses 360 & 411: (or wumpus12 safe12) , (or (not wumpus12))
+Resolvent = (or safe12)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 20 >---
+Number of clauses: 418
+Resolving clauses 54 & 387: (or (not wumpus34) stench44) , (or (not stench44))
+Resolvent = (or (not wumpus34))
+418.   (or (not wumpus34))
+
+---< ITERATION 21 >---
+Number of clauses: 419
+Resolving clauses 153 & 387: (or stench44 (not wumpus34)) , (or (not stench44))
+Resolvent = (or (not wumpus34))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 22 >---
+Number of clauses: 419
+Resolving clauses 321 & 388: (or (not visited13) (not pit13)) , (or visited13)
+Resolvent = (or (not pit13))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 23 >---
+Number of clauses: 419
+Resolving clauses 48 & 390: (or (not wumpus14) stench13) , (or (not stench13))
+Resolvent = (or (not wumpus14))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 24 >---
+Number of clauses: 419
+Resolving clauses 311 & 415: (or (not wumpus43) (not wumpus44)) , (or wumpus43)
+Resolvent = (or (not wumpus44))
+419.   (or (not wumpus44))
+
+---< ITERATION 25 >---
+Number of clauses: 420
+Resolving clauses 320 & 388: (or (not visited13) (not wumpus13)) , (or visited13)
+Resolvent = (or (not wumpus13))
+420.   (or (not wumpus13))
+
+---< ITERATION 26 >---
+Number of clauses: 421
+Resolving clauses 69 & 387: (or (not wumpus43) stench44) , (or (not stench44))
+Resolvent = (or (not wumpus43))
+421.   (or (not wumpus43))
+
+---< ITERATION 27 >---
+Number of clauses: 422
+Resolving clauses 152 & 387: (or stench44 (not wumpus43)) , (or (not stench44))
+Resolvent = (or (not wumpus43))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 28 >---
+Number of clauses: 422
+Resolving clauses 348 & 418: (or wumpus34 safe34) , (or (not wumpus34))
+Resolvent = (or safe34)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 29 >---
+Number of clauses: 422
+Resolving clauses 274 & 415: (or (not wumpus23) (not wumpus43)) , (or wumpus43)
+Resolvent = (or (not wumpus23))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 30 >---
+Number of clauses: 422
+Resolving clauses 350 & 419: (or wumpus44 safe44) , (or (not wumpus44))
+Resolvent = (or safe44)
+422.   (or safe44)
+
+---< ITERATION 31 >---
+Number of clauses: 423
+Resolving clauses 352 & 420: (or wumpus13 safe13) , (or (not wumpus13))
+Resolvent = (or safe13)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 32 >---
+Number of clauses: 423
+Resolving clauses 147 & 381: (or stench24 (not wumpus34)) , (or (not stench24))
+Resolvent = (or (not wumpus34))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 33 >---
+Number of clauses: 423
+Resolving clauses 101 & 383: (or breeze34 (not pit33)) , (or (not breeze34))
+Resolvent = (or (not pit33))
+423.   (or (not pit33))
+
+---< ITERATION 34 >---
+Number of clauses: 424
+Resolving clauses 319 & 385: (or (not visited44) (not pit44)) , (or visited44)
+Resolvent = (or (not pit44))
+424.   (or (not pit44))
+
+---< ITERATION 35 >---
+Number of clauses: 425
+Resolving clauses 21 & 386: (or (not pit43) breeze44) , (or (not breeze44))
+Resolvent = (or (not pit43))
+425.   (or (not pit43))
+
+---< ITERATION 36 >---
+Number of clauses: 426
+Resolving clauses 104 & 386: (or breeze44 (not pit43)) , (or (not breeze44))
+Resolvent = (or (not pit43))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 37 >---
+Number of clauses: 426
+Resolving clauses 358 & 421: (or wumpus43 safe43) , (or (not wumpus43))
+Resolvent = (or safe43)
+426.   (or safe43)
+
+---< ITERATION 38 >---
+Number of clauses: 427
+Resolving clauses 6 & 386: (or (not pit34) breeze44) , (or (not breeze44))
+Resolvent = (or (not pit34))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 39 >---
+Number of clauses: 427
+Resolving clauses 232 & 415: (or (not wumpus13) (not wumpus43)) , (or wumpus43)
+Resolvent = (or (not wumpus13))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 40 >---
+Number of clauses: 427
+Resolving clauses 102 & 383: (or breeze34 (not pit44)) , (or (not breeze34))
+Resolvent = (or (not pit44))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 41 >---
+Number of clauses: 427
+Resolving clauses 103 & 383: (or breeze34 (not pit24)) , (or (not breeze34))
+Resolvent = (or (not pit24))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 42 >---
+Number of clauses: 427
+Resolving clauses 318 & 385: (or (not visited44) (not wumpus44)) , (or visited44)
+Resolvent = (or (not wumpus44))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 43 >---
+Number of clauses: 427
+Resolving clauses 357 & 423: (or pit33 safe33) , (or (not pit33))
+Resolvent = (or safe33)
+427.   (or safe33)
+
+---< ITERATION 44 >---
+Number of clauses: 428
+Resolving clauses 351 & 424: (or pit44 safe44) , (or (not pit44))
+Resolvent = (or safe44)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 45 >---
+Number of clauses: 428
+Resolving clauses 359 & 425: (or pit43 safe43) , (or (not pit43))
+Resolvent = (or safe43)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 46 >---
+Number of clauses: 428
+Resolving clauses 205 & 415: (or (not wumpus11) (not wumpus43)) , (or wumpus43)
+Resolvent = (or (not wumpus11))
+428.   (or (not wumpus11))
+
+---< ITERATION 47 >---
+Number of clauses: 429
+Resolving clauses 403 & 426: (or (not safe43)) , (or safe43)
+Resolvent = (or)
+
+Success! An empty clause was derived, so safe43 is entailed.
