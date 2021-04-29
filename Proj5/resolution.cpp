@@ -263,38 +263,56 @@ int main(int argc, char** argv) {
         KB.push_back(parse("(or visited14)"));
         KB.push_back(parse("(or (not breeze14))"));
         KB.push_back(parse("(or (not stench14))"));
+        KB.push_back(parse("(or (not pit14))"));
+        KB.push_back(parse("(or (not wumpus14))"));
 
         KB.push_back(parse("(or visited24)"));
         KB.push_back(parse("(or breeze24)"));
         KB.push_back(parse("(or (not stench24))"));
+        KB.push_back(parse("(or (not pit24))"));
+        KB.push_back(parse("(or (not wumpus24))"));
 
         KB.push_back(parse("(or visited34)"));
         KB.push_back(parse("(or (not breeze34))"));
         KB.push_back(parse("(or stench34)"));
+        KB.push_back(parse("(or (not pit34))"));
+        KB.push_back(parse("(or (not wumpus34))"));
 
         KB.push_back(parse("(or visited44)"));
         KB.push_back(parse("(or (not breeze44))"));
         KB.push_back(parse("(or (not stench44))"));
+        KB.push_back(parse("(or (not pit44))"));
+        KB.push_back(parse("(or (not wumpus44))"));
 
         KB.push_back(parse("(or visited13)"));
         KB.push_back(parse("(or breeze13)"));
         KB.push_back(parse("(or (not stench13))"));
+        KB.push_back(parse("(or (not pit13))"));
+        KB.push_back(parse("(or (not wumpus13))"));
 
         KB.push_back(parse("(or visited12)"));
         KB.push_back(parse("(or (not breeze12))"));
         KB.push_back(parse("(or (not stench12))"));
+        KB.push_back(parse("(or (not pit12))"));
+        KB.push_back(parse("(or (not wumpus12))"));
 
         KB.push_back(parse("(or visited22)"));
         KB.push_back(parse("(or breeze22)"));
         KB.push_back(parse("(or (not stench22))"));
+        KB.push_back(parse("(or (not pit22))"));
+        KB.push_back(parse("(or (not wumpus22))"));
 
         KB.push_back(parse("(or visited32)"));
         KB.push_back(parse("(or (not breeze32))"));
         KB.push_back(parse("(or stench32)"));
+        KB.push_back(parse("(or (not pit32))"));
+        KB.push_back(parse("(or (not wumpus32))"));
 
         KB.push_back(parse("(or visited42)"));
         KB.push_back(parse("(or breeze42)"));
         KB.push_back(parse("(or (not stench42))"));
+        KB.push_back(parse("(or (not pit42))"));
+        KB.push_back(parse("(or (not wumpus42))"));
     }
 
     if (resolution(KB, query)) cout << "\nSuccess! An empty clause was derived, so " << orig << " is entailed." << endl;

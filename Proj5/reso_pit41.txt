@@ -339,7 +339,7 @@
 338.   (or (not stench42))
 339.   (or (not pit42))
 340.   (or (not wumpus42))
-341.   (or (not safe11))
+341.   (or (not pit41))
 
 ---< ITERATION 0 >---
 Number of clauses: 342
@@ -385,73 +385,169 @@ The resolvent is an invalid clause or already exists in the KB.
 
 ---< ITERATION 7 >---
 Number of clauses: 345
-Resolving clauses 265 & 341: (or wumpus11 safe11) , (or (not safe11))
-Resolvent = (or wumpus11)
-345.   (or wumpus11)
+Resolving clauses 109 & 341: (or (not breeze42) pit43 pit41 pit32) , (or (not pit41))
+Resolvent = (or (not breeze42) pit43 pit32)
+345.   (or (not breeze42) pit43 pit32)
 
 ---< ITERATION 8 >---
 Number of clauses: 346
-Resolving clauses 264 & 341: (or pit11 safe11) , (or (not safe11))
-Resolvent = (or pit11)
-346.   (or pit11)
+Resolving clauses 288 & 341: (or pit41 safe41) , (or (not pit41))
+Resolvent = (or safe41)
+346.   (or safe41)
 
 ---< ITERATION 9 >---
 Number of clauses: 347
-Resolving clauses 314 & 343: (or (not pit44)) , (or (not breeze43) pit44 pit33)
-Resolvent = (or (not breeze43) pit33)
-347.   (or (not breeze43) pit33)
+Resolving clauses 104 & 341: (or (not breeze31) pit32 pit41 pit21) , (or (not pit41))
+Resolvent = (or (not breeze31) pit32 pit21)
+347.   (or (not breeze31) pit32 pit21)
 
 ---< ITERATION 10 >---
 Number of clauses: 348
+Resolving clauses 314 & 343: (or (not pit44)) , (or (not breeze43) pit44 pit33)
+Resolvent = (or (not breeze43) pit33)
+348.   (or (not breeze43) pit33)
+
+---< ITERATION 11 >---
+Number of clauses: 349
 Resolving clauses 243 & 326: (or (not visited22) (not wumpus22)) , (or visited22)
 Resolvent = (or (not wumpus22))
 The resolvent is an invalid clause or already exists in the KB.
 
----< ITERATION 11 >---
-Number of clauses: 348
-Resolving clauses 24 & 332: (or (not pit31) breeze32) , (or (not breeze32))
-Resolvent = (or (not pit31))
-348.   (or (not pit31))
-
 ---< ITERATION 12 >---
 Number of clauses: 349
-Resolving clauses 48 & 345: (or (not wumpus11) stench12) , (or wumpus11)
-Resolvent = (or stench12)
-349.   (or stench12)
+Resolving clauses 334 & 345: (or (not pit32)) , (or (not breeze42) pit43 pit32)
+Resolvent = (or (not breeze42) pit43)
+349.   (or (not breeze42) pit43)
 
 ---< ITERATION 13 >---
 Number of clauses: 350
-Resolving clauses 119 & 345: (or (not wumpus11) (not wumpus31)) , (or wumpus11)
-Resolvent = (or (not wumpus31))
-350.   (or (not wumpus31))
+Resolving clauses 337 & 345: (or breeze42) , (or (not breeze42) pit43 pit32)
+Resolvent = (or pit43 pit32)
+350.   (or pit43 pit32)
 
 ---< ITERATION 14 >---
 Number of clauses: 351
-Resolving clauses 233 & 345: (or (not visited11) (not wumpus11)) , (or wumpus11)
-Resolvent = (or (not visited11))
-351.   (or (not visited11))
+Resolving clauses 334 & 347: (or (not pit32)) , (or (not breeze31) pit32 pit21)
+Resolvent = (or (not breeze31) pit21)
+351.   (or (not breeze31) pit21)
 
 ---< ITERATION 15 >---
 Number of clauses: 352
-Resolving clauses 105 & 348: (or (not breeze32) pit33 pit31 pit42 pit22) , (or (not pit31))
-Resolvent = (or (not breeze32) pit33 pit42 pit22)
-352.   (or (not breeze32) pit33 pit42 pit22)
+Resolving clauses 24 & 332: (or (not pit31) breeze32) , (or (not breeze32))
+Resolvent = (or (not pit31))
+352.   (or (not pit31))
 
 ---< ITERATION 16 >---
 Number of clauses: 353
-Resolving clauses 108 & 348: (or (not breeze41) pit42 pit31) , (or (not pit31))
-Resolvent = (or (not breeze41) pit42)
-353.   (or (not breeze41) pit42)
+Resolving clauses 337 & 349: (or breeze42) , (or (not breeze42) pit43)
+Resolvent = (or pit43)
+353.   (or pit43)
 
 ---< ITERATION 17 >---
 Number of clauses: 354
-Resolving clauses 280 & 348: (or pit31 safe31) , (or (not pit31))
-Resolvent = (or safe31)
-354.   (or safe31)
+Resolving clauses 334 & 350: (or (not pit32)) , (or pit43 pit32)
+Resolvent = (or pit43)
+The resolvent is an invalid clause or already exists in the KB.
 
 ---< ITERATION 18 >---
+Number of clauses: 354
+Resolving clauses 283 & 335: (or wumpus32 safe32) , (or (not wumpus32))
+Resolvent = (or safe32)
+354.   (or safe32)
+
+---< ITERATION 19 >---
 Number of clauses: 355
-Resolving clauses 323 & 349: (or (not stench12)) , (or stench12)
+Resolving clauses 100 & 352: (or (not breeze21) pit22 pit31 pit11) , (or (not pit31))
+Resolvent = (or (not breeze21) pit22 pit11)
+355.   (or (not breeze21) pit22 pit11)
+
+---< ITERATION 20 >---
+Number of clauses: 356
+Resolving clauses 105 & 352: (or (not breeze32) pit33 pit31 pit42 pit22) , (or (not pit31))
+Resolvent = (or (not breeze32) pit33 pit42 pit22)
+356.   (or (not breeze32) pit33 pit42 pit22)
+
+---< ITERATION 21 >---
+Number of clauses: 357
+Resolving clauses 108 & 352: (or (not breeze41) pit42 pit31) , (or (not pit31))
+Resolvent = (or (not breeze41) pit42)
+357.   (or (not breeze41) pit42)
+
+---< ITERATION 22 >---
+Number of clauses: 358
+Resolving clauses 280 & 352: (or pit31 safe31) , (or (not pit31))
+Resolvent = (or safe31)
+358.   (or safe31)
+
+---< ITERATION 23 >---
+Number of clauses: 359
+Resolving clauses 43 & 353: (or (not pit43) breeze44) , (or pit43)
+Resolvent = (or breeze44)
+359.   (or breeze44)
+
+---< ITERATION 24 >---
+Number of clauses: 360
+Resolving clauses 329 & 355: (or (not pit22)) , (or (not breeze21) pit22 pit11)
+Resolvent = (or (not breeze21) pit11)
+360.   (or (not breeze21) pit11)
+
+---< ITERATION 25 >---
+Number of clauses: 361
+Resolving clauses 329 & 356: (or (not pit22)) , (or (not breeze32) pit33 pit42 pit22)
+Resolvent = (or (not breeze32) pit33 pit42)
+361.   (or (not breeze32) pit33 pit42)
+
+---< ITERATION 26 >---
+Number of clauses: 362
+Resolving clauses 339 & 356: (or (not pit42)) , (or (not breeze32) pit33 pit42 pit22)
+Resolvent = (or (not breeze32) pit33 pit22)
+362.   (or (not breeze32) pit33 pit22)
+
+---< ITERATION 27 >---
+Number of clauses: 363
+Resolving clauses 339 & 361: (or (not pit42)) , (or (not breeze32) pit33 pit42)
+Resolvent = (or (not breeze32) pit33)
+363.   (or (not breeze32) pit33)
+
+---< ITERATION 28 >---
+Number of clauses: 364
+Resolving clauses 329 & 362: (or (not pit22)) , (or (not breeze32) pit33 pit22)
+Resolvent = (or (not breeze32) pit33)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 29 >---
+Number of clauses: 364
+Resolving clauses 339 & 357: (or (not pit42)) , (or (not breeze41) pit42)
+Resolvent = (or (not breeze41))
+364.   (or (not breeze41))
+
+---< ITERATION 30 >---
+Number of clauses: 365
+Resolving clauses 111 & 359: (or (not breeze44) pit43 pit34) , (or breeze44)
+Resolvent = (or pit43 pit34)
+365.   (or pit43 pit34)
+
+---< ITERATION 31 >---
+Number of clauses: 366
+Resolving clauses 25 & 364: (or (not pit31) breeze41) , (or (not breeze41))
+Resolvent = (or (not pit31))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 32 >---
+Number of clauses: 366
+Resolving clauses 41 & 364: (or (not pit42) breeze41) , (or (not breeze41))
+Resolvent = (or (not pit42))
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 33 >---
+Number of clauses: 366
+Resolving clauses 309 & 365: (or (not pit34)) , (or pit43 pit34)
+Resolvent = (or pit43)
+The resolvent is an invalid clause or already exists in the KB.
+
+---< ITERATION 34 >---
+Number of clauses: 366
+Resolving clauses 312 & 359: (or (not breeze44)) , (or breeze44)
 Resolvent = (or)
 
-Success! An empty clause was derived, so safe11 is entailed.
+Success! An empty clause was derived, so pit41 is entailed.
