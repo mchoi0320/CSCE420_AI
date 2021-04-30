@@ -42,8 +42,10 @@ make clean
 
   * I was able to output the correct results for where pits are located and where they are not, but my program falsely returns success for any tile when checking if it is safe, including those already proven to have a pit. Moreover, it is still failing to locate the wumpus. [4/28/20]
 
+  * The error turned out to be a typo in line 31 of `wumpus.cpp`. Now the program works as it should! [4/30/20]
+
 * The `wumpus.cpp` script is not very effective. For the constraint that only one wumpus exists across the entire board, I was not able to handle repetitive clauses through the code itself, so I manually removed them.
 
 ## To be Continued...
 
-- [ ] Improve the knowledge base `wumpus.cnf`
+- [x] Improve the knowledge base `wumpus.cnf`

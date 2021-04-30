@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     cout << "# rooms adjacent to the wumpus will have a stench\n";
     for (int i=1; i<n+1; i++) {
         for (int j=1; j<n+1; j++) {
-            if (j+1 <= n) cout << "(or (not wumpus" << i << j << ") stench" << 1 << j+1 << ")\n";
+            if (j+1 <= n) cout << "(or (not wumpus" << i << j << ") stench" << i << j+1 << ")\n";
             if (j-1 > 0) cout << "(or (not wumpus" << i << j << ") stench" << i << j-1 << ")\n";
             if (i+1 <= n) cout << "(or (not wumpus" << i << j << ") stench" << i+1 << j << ")\n";
             if (i-1 > 0) cout << "(or (not wumpus" << i << j << ") stench" << i-1 << j << ")\n";
@@ -71,65 +71,72 @@ int main(int argc, char** argv) {
     // }
     // cout << endl;
 
-    // cout << "# if there is a stench in a room, one of the adjacent rooms have a wumpus\n";
-    // for (int i=1; i<n+1; i++) {
-    //     // for (int j=1; j<n+1; j++) {
-    //     //     cout << "(or (not stench" << i << j << ")";
-    //     //     if (j+1 <= n) cout << " wumpus" << i << j+1;
-    //     //     if (j-1 > 0) cout << " wumpus" << i << j-1;
-    //     //     if (i+1 <= n) cout << " wumpus" << i+1 << j;
-    //     //     if (i-1 > 0) cout << " wumpus" << i-1 << j;
-    //     //     cout << ")\n";
-    //     // }
+    cout << "# if there is a stench in a room, one of the adjacent rooms have a wumpus\n";
+    for (int i=1; i<n+1; i++) {
+        for (int j=1; j<n+1; j++) {
+            cout << "(or (not stench" << i << j << ")";
+            if (j+1 <= n) cout << " wumpus" << i << j+1;
+            if (j-1 > 0) cout << " wumpus" << i << j-1;
+            if (i+1 <= n) cout << " wumpus" << i+1 << j;
+            if (i-1 > 0) cout << " wumpus" << i-1 << j;
+            cout << ")\n";
 
-    //     for (int j=1; j<n+1; j++) {
-    //         bool first = false, second = false, third = false, fourth = false;
+            // cout << "(or (not stench" << i << j << ")";
+            // if (j+1 <= n) cout << " (not wumpus" << i << j+1 << ")";
+            // if (j-1 > 0) cout << " (not wumpus" << i << j-1 << ")";
+            // if (i+1 <= n) cout << " (not wumpus" << i+1 << j << ")";
+            // if (i-1 > 0) cout << " (not wumpus" << i-1 << j << ")";
+            // cout << ")\n";
+        }
+
+        // for (int j=1; j<n+1; j++) {
+        //     bool first = false, second = false, third = false, fourth = false;
             
-    //         cout << "(or (not stench" << i << j << ")";
-    //         if (j+1 <= n) { cout << " (not wumpus" << i << j+1 << ")"; first = true; }
-    //         if (j-1 > 0) { cout << " (not wumpus" << i << j-1 << ")"; second = true; }
-    //         if (i+1 <= n) { cout << " (not wumpus" << i+1 << j << ")"; third = true; }
-    //         if (i-1 > 0) { cout << " (not wumpus" << i-1 << j << ")"; fourth = true; }
-    //         cout << ")\n";
+        //     cout << "(or (not stench" << i << j << ")";
+        //     if (j+1 <= n) { cout << " (not wumpus" << i << j+1 << ")"; first = true; }
+        //     if (j-1 > 0) { cout << " (not wumpus" << i << j-1 << ")"; second = true; }
+        //     if (i+1 <= n) { cout << " (not wumpus" << i+1 << j << ")"; third = true; }
+        //     if (i-1 > 0) { cout << " (not wumpus" << i-1 << j << ")"; fourth = true; }
+        //     cout << ")\n";
 
-    //         if (first) {
-    //             cout << "(or (not stench" << i << j << ")";
-    //             if (j+1 <= n) cout << " (not wumpus" << i << j+1 << ")";
-    //             if (j-1 > 0) cout << " wumpus" << i << j-1;
-    //             if (i+1 <= n) cout << " wumpus" << i+1 << j;
-    //             if (i-1 > 0) cout << " wumpus" << i-1 << j;
-    //             cout << ")\n";
-    //         }
+        //     if (first) {
+        //         cout << "(or (not stench" << i << j << ")";
+        //         if (j+1 <= n) cout << " (not wumpus" << i << j+1 << ")";
+        //         if (j-1 > 0) cout << " wumpus" << i << j-1;
+        //         if (i+1 <= n) cout << " wumpus" << i+1 << j;
+        //         if (i-1 > 0) cout << " wumpus" << i-1 << j;
+        //         cout << ")\n";
+        //     }
 
-    //         if (second) {
-    //             cout << "(or (not stench" << i << j << ")";
-    //             if (j+1 <= n) cout << " wumpus" << i << j+1;
-    //             if (j-1 > 0) cout << " (not wumpus" << i << j-1 << ")";
-    //             if (i+1 <= n) cout << " wumpus" << i+1 << j;
-    //             if (i-1 > 0) cout << " wumpus" << i-1 << j;
-    //             cout << ")\n";
-    //         }
+        //     if (second) {
+        //         cout << "(or (not stench" << i << j << ")";
+        //         if (j+1 <= n) cout << " wumpus" << i << j+1;
+        //         if (j-1 > 0) cout << " (not wumpus" << i << j-1 << ")";
+        //         if (i+1 <= n) cout << " wumpus" << i+1 << j;
+        //         if (i-1 > 0) cout << " wumpus" << i-1 << j;
+        //         cout << ")\n";
+        //     }
         
-    //         if (third) {
-    //             cout << "(or (not stench" << i << j << ")";
-    //             if (j+1 <= n) cout << " wumpus" << i << j+1;
-    //             if (j-1 > 0) cout << " wumpus" << i << j-1;
-    //             if (i+1 <= n) cout << " (not wumpus" << i+1 << j << ")";
-    //             if (i-1 > 0) cout << " wumpus" << i-1 << j;
-    //             cout << ")\n";
-    //         }
+        //     if (third) {
+        //         cout << "(or (not stench" << i << j << ")";
+        //         if (j+1 <= n) cout << " wumpus" << i << j+1;
+        //         if (j-1 > 0) cout << " wumpus" << i << j-1;
+        //         if (i+1 <= n) cout << " (not wumpus" << i+1 << j << ")";
+        //         if (i-1 > 0) cout << " wumpus" << i-1 << j;
+        //         cout << ")\n";
+        //     }
 
-    //         if (fourth) {
-    //             cout << "(or (not stench" << i << j << ")";
-    //             if (j+1 <= n) cout << " wumpus" << i << j+1;
-    //             if (j-1 > 0) cout << " wumpus" << i << j-1;
-    //             if (i+1 <= n) cout << " wumpus" << i+1 << j;
-    //             if (i-1 > 0) cout << " (not wumpus" << i-1 << j << ")";
-    //             cout << ")\n";
-    //         }
-    //     }
-    // }
-    // cout << endl;
+        //     if (fourth) {
+        //         cout << "(or (not stench" << i << j << ")";
+        //         if (j+1 <= n) cout << " wumpus" << i << j+1;
+        //         if (j-1 > 0) cout << " wumpus" << i << j-1;
+        //         if (i+1 <= n) cout << " wumpus" << i+1 << j;
+        //         if (i-1 > 0) cout << " (not wumpus" << i-1 << j << ")";
+        //         cout << ")\n";
+        //     }
+        // }
+    }
+    cout << endl;
 
     cout << "# there is only one wumpus\n";
     for (int i=1; i<n+1; i++) {
@@ -158,8 +165,9 @@ int main(int argc, char** argv) {
     cout << "# a room is safe if it does not contain a pit or a wumpus\n";
     for (int i=1; i<n+1; i++) {
         for (int j=1; j<n+1; j++) {
-            cout << "(or pit" << i << j << " safe" << i << j << ")\n";
-            cout << "(or wumpus" << i << j << " safe" << i << j << ")\n";
+            // cout << "(or pit" << i << j << " safe" << i << j << ")\n";
+            // cout << "(or wumpus" << i << j << " safe" << i << j << ")\n";
+            cout << "(or pit" << i << j << " wumpus" << i << j << " safe" << i << j << ")\n";
         }
     }
 }
